@@ -12,42 +12,42 @@ import SkillCard from "./SkillCard";
 
 const skillItem = [
   {
-    imgSrc: '/images/c.svg',
+    imgSrc: 'images/c.svg',
     label: 'C',
     desc: 'Programming Language'
   },
   {
-    imgSrc: '/images/python.svg',
+    imgSrc: 'images/python.svg',
     label: 'Python',
     desc: 'Programming Language'
   },
   {
-    imgSrc: '/images/swift.svg',
+    imgSrc: 'images/swift.svg',
     label: 'Swift',
     desc: 'Programming Language'
   },
   {
-    imgSrc: '/images/javascript.svg',
+    imgSrc: 'images/javascript.svg',
     label: 'JavaScript',
     desc: 'Programming Language'
   },
   {
-    imgSrc: '/images/aws.svg',
+    imgSrc: 'images/aws.svg',
     label: 'AWS',
     desc: 'Cloud Platform'
   },
   {
-    imgSrc: '/images/gcp.svg',
+    imgSrc: 'images/gcp.svg',
     label: 'GCP',
     desc: 'Cloud Platform'
   },
   {
-    imgSrc: '/images/react.svg',
+    imgSrc: 'images/react.svg',
     label: 'React',
     desc: 'Framework'
   },
   {
-    imgSrc: '/images/git.svg',
+    imgSrc: 'images/git.svg',
     label: 'Git',
     desc: 'Version Control'
   },
