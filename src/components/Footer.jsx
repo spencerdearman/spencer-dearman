@@ -24,9 +24,14 @@ const sitemap = [
     href: '#work'
   },
   {
+    label: 'Courses',
+    href: '#reviews'
+  },
+  {
     label: 'Contact me',
     href: '#contact'
   }
+
 ];
 
 const socials = [
@@ -54,12 +59,12 @@ const Footer = () => {
 
           <div className="mb-10">
             <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
-              Let&apos;s work together today!
+              Let&apos;s Program!
             </h2>
 
             <ButtonPrimary
               href="mailto:dearmanspencer@gmail.com"
-              label="Start project"
+              label="Reach Out"
               icon="chevron_right"
               classes="reveal-up"
             />
