@@ -13,15 +13,12 @@ import PersonalCard from "./PersonalCard";
 const works = [
   {
     imgSrc: 'images/personal-1.jpg',
-    title: 'Chicago Marathon',
   },
   {
     imgSrc: 'images/personal-2.jpg',
-    title: 'Berlin Marathon',
   },
   {
     imgSrc: 'images/personal-3.jpg',
-    title: 'Diving',
   },
 ];
 
@@ -43,11 +40,10 @@ const Personal = () => {
         </p>
 
         <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
-          {works.map(({ imgSrc, title }, key) => (
+          {works.map(({ imgSrc }, key) => (
             <PersonalCard
               key={key}
               imgSrc={imgSrc}
-              title={title}
               classes="reveal-up"
             />
           ))}
