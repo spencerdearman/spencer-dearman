@@ -32,7 +32,7 @@ const courses = [
   { courseName: "Machine Learning for Systems", courseCode: "CMSC 25422" },
 ];
 
-const Review = () => {
+const Courses = () => {
   useGSAP(() => {
     gsap.to('.scrub-slide', {
       scrollTrigger: {
@@ -47,7 +47,7 @@ const Review = () => {
 
   return (
     <section
-      id="reviews"
+      id="courses"
       className="section overflow-hidden"
     >
       <div className="container">
@@ -69,4 +69,4 @@ const Review = () => {
   );
 };
 
-export default Review;
+export default Courses;

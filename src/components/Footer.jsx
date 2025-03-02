@@ -25,7 +25,11 @@ const sitemap = [
   },
   {
     label: 'Courses',
-    href: '#reviews'
+    href: '#courses'
+  },
+  {
+    label: 'Personal',
+    href: '#personal'
   },
   {
     label: 'Contact me',
@@ -59,7 +63,7 @@ const Footer = () => {
 
           <div className="mb-10">
             <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
-              Let&apos;s Program!
+              Let&apos;s Chat!
             </h2>
 
             <ButtonPrimary

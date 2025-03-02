@@ -55,14 +55,19 @@ const Navbar = ({ navOpen }) => {
     },
     {
       label: 'Courses',
-      link: '#reviews',
+      link: '#courses',
+      className: 'nav-link'
+    },
+    {
+      label: 'Personal',
+      link: '#personal',
       className: 'nav-link'
     },
     {
       label: 'Contact',
       link: '#contact',
       className: 'nav-link md:hidden'
-    }
+    },
   ];
 
   return (
