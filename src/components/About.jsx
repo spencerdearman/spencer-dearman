@@ -13,10 +13,6 @@ const aboutItems = [
     label: 'Programming Languages',
     number: 4
   },
-  {
-    label: 'Marathons Run',
-    number: 2
-  },
 ];
 
 
