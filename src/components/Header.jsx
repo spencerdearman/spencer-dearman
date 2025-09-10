@@ -50,13 +50,6 @@ const Header = () => {
           <Navbar navOpen={navOpen} />
         </div>
 
-        <a
-          href="#contact"
-          className="btn btn-secondary max-md:hidden md:justify-self-end"
-        >
-          Contact Me
-        </a>
-
       </div>
     </header>
   )

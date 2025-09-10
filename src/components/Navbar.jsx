@@ -22,8 +22,11 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
   }
 
-  useEffect(initActiveBox, []);
-  window.addEventListener('resize', initActiveBox);
+  useEffect(() => {
+    initActiveBox();
+    window.addEventListener('resize', initActiveBox);
+    return () => window.removeEventListener('resize', initActiveBox);
+  }, []);
 
   const activeCurrentLink = (event) => {
     lastActiveLink.current?.classList.remove('active');
@@ -49,6 +52,11 @@ const Navbar = ({ navOpen }) => {
       className: 'nav-link'
     },
     {
+      label: 'Experience',
+      link: '#experience',
+      className: 'nav-link'
+    },
+    {
       label: 'Work',
       link: '#work',
       className: 'nav-link'
@@ -56,11 +64,6 @@ const Navbar = ({ navOpen }) => {
     {
       label: 'Courses',
       link: '#courses',
-      className: 'nav-link'
-    },
-    {
-      label: 'Personal',
-      link: '#personal',
       className: 'nav-link'
     },
     {

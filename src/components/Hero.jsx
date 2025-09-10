@@ -22,17 +22,11 @@ const Hero = () => {
             University of Chicago Student
           </p>
           <p className="headline-sub mb-6">
-            Aspiring Software Engineer
+            Google Software Engineering Intern
           </p>
 
           {/* Buttons */}
           <div className="flex items-center gap-3">
-            <a href="files/spencer-dearman-resume.pdf" download>
-              <ButtonPrimary
-                label="Download Resume"
-                icon="download"
-              />
-            </a>
             <ButtonOutline
               href="#about"
               label="Scroll down"
@@ -43,11 +37,11 @@ const Hero = () => {
 
         {/* Image Section */}
         <div className="hidden lg:block">
-          <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
+          <figure className="profile-image">
             <img
-              src="images/spencer-dearman.png"
-              width={656}
-              height={800}
+              src="images/spencer-dearman.jpg"
+              width={650}
+              height={650}
               alt="Spencer Dearman"
               className="w-full"
             />

@@ -17,28 +17,28 @@ const skillItem = [
     desc: 'Programming Language'
   },
   {
-    imgSrc: 'images/python.svg',
-    label: 'Python',
-    desc: 'Programming Language'
-  },
-  {
     imgSrc: 'images/swift.svg',
     label: 'Swift',
     desc: 'Programming Language'
   },
   {
-    imgSrc: 'images/javascript.svg',
-    label: 'JavaScript',
+    imgSrc: 'images/python.svg',
+    label: 'Python',
     desc: 'Programming Language'
+  },
+  {
+    imgSrc: 'images/objc.svg',
+    label: 'Objective-C',
+    desc: 'Programming Language'
+  },
+   {
+    imgSrc: 'images/gcp.svg',
+    label: 'GCP',
+    desc: 'Cloud Platform'
   },
   {
     imgSrc: 'images/aws.svg',
     label: 'AWS',
-    desc: 'Cloud Platform'
-  },
-  {
-    imgSrc: 'images/gcp.svg',
-    label: 'GCP',
     desc: 'Cloud Platform'
   },
   {
