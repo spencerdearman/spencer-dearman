@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="hidden lg:block">
           <figure className="profile-image">
             <img
-              src="images/spencer-dearman.jpg"
+              src="images/spencer-dearman.png"
               width={650}
               height={650}
               alt="Spencer Dearman"
