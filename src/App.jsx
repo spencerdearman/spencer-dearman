@@ -25,7 +25,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Experience from "./components/Experience"
+import Explore from "./components/Explore"
 import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
@@ -34,6 +34,9 @@ import Footer from "./components/Footer";
 
 const App = () => {
 
+  /**
+  * Reveals
+  */
   useGSAP(() => {
     const elements = gsap.utils.toArray('.reveal-up');
 
@@ -53,13 +56,49 @@ const App = () => {
     });
   });
 
+  /**
+  * Navigation bubble auto-movement
+  */
+  useGSAP(() => {
+    const sections = gsap.utils.toArray('main > section');
+    const navLinks = gsap.utils.toArray('.nav-link');
+
+    const setActiveLink = (sectionId) => {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeLink = navLinks.find(link => link.getAttribute('href') === `#${sectionId}`);
+
+      if (activeLink) {
+        activeLink.classList.add('active');
+        gsap.to('.active-box', {
+          top: activeLink.offsetTop,
+          left: activeLink.offsetLeft,
+          width: activeLink.offsetWidth,
+          height: activeLink.offsetHeight,
+          duration: 0.2,
+          ease: 'power2.inOut'
+        });
+      }
+    };
+
+    sections.forEach(section => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => setActiveLink(section.id),
+        onEnterBack: () => setActiveLink(section.id)
+      });
+    });
+
+  }, []);
+
   return (
     <ReactLenis root>
       <Header />
       <main>
         <Hero />
         <About />
-        <Experience />
+        <Explore />
         <Skill />
         <Work />
         <Contact />
@@ -69,6 +108,5 @@ const App = () => {
   )
 
 }
-
 
 export default App;

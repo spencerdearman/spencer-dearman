@@ -53,7 +53,7 @@ const Navbar = ({ navOpen }) => {
     },
     {
       label: 'Explore',
-      link: '#experience',
+      link: '#explore',
       className: 'nav-link'
     },
     {

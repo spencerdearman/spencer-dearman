@@ -148,14 +148,6 @@ body {
   duration-500;
 }
 
-
-.active-box {
-  @apply absolute bg-white rounded-full shadow-sm;
-  /* This is the magic for the smooth animation */
-  /* (0.25, 0.46, 0.45, 0.94); */
-  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
 /* ---------------------------------- *\
  * HERO
 \* ---------------------------------- */
@@ -192,29 +184,47 @@ body {
 }
 
 .about-content {
- @apply text-neutral-900/60
+  @apply text-neutral-900/60
  mb-4 
  md:mb-8 md:text-xl md:max-w-[60ch];
 }
 
 /* ---------------------------------- *\
- * EXPERIENCE CARD
+ * EXPLORE
 \* ---------------------------------- */
 
-.experience-card-container {
+.tile-style {
+  @apply bg-neutral-300/50
+  rounded-[30px]
+  p-6 
+  flex 
+  items-center 
+  justify-center
+}
+
+.home-grid {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  max-width: 672px;
+  display: grid;
+}
+
+.explore-card-container {
   @apply relative p-4 
   rounded-[30px]
   bg-zinc-800 
   hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors;
 }
 
-.experience-card-img {
+.explore-card-img {
   @apply img-box 
   aspect-square 
   rounded-[30px]
   mb-4;
 }
-
 
 /* ---------------------------------- *\
  * HEADER
@@ -247,9 +257,8 @@ body {
   h-24
   z-50
   flex 
-  items-center 
+  items-center;
 }
-
 
 /* ---------------------------------- *\
  * COMPONENTS
@@ -304,9 +313,9 @@ body {
 
 .btn-primary {
   @apply h-11 
-  bg-neutral-100 
+  bg-neutral-300/50
   text-zinc-950 
-  hover:bg-sky-300 active:bg-sky-400;
+  hover:bg-neutral-400 active:bg-neutral-400;
 }
 
 .btn-outline {

@@ -24,7 +24,8 @@ const About = () => {
     >
       <div className="container">
 
-        <div className="about-container reveal-up">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[20rem] gap-4">
+        <div className="tile-style md:col-span-3 about-container reveal-up">
           <p className="about-content">
             Welcome! I&apos;m Spencer Dearman, a rising fourth-year student pursuing a joint BS/MS degree in Computer Science with a specialization in Computer Systems at the University of Chicago. I have a strong interest in low-level programming, operating systems, and the algorithms that make systems run efficiently. Currently, I&apos;m a Software Engineering Intern at Google in Mountain View.
           </p>
@@ -52,7 +53,7 @@ const About = () => {
             />
           </div>
         </div>
-
+        </div>
       </div>
     </section>
   )
