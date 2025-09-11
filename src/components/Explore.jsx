@@ -25,34 +25,34 @@ const Explore = () => {
             - I'm using placeholder styles for now. You'll replace these divs with your project cards.
           */}
 
-          {/* Tile 1: Spans 2 columns */}
-          <div className={`tile-style md:col-span-2`}>
-            <p className="text-neutral-400">XL Tile (2x1)</p>
+          {/* Tile 1: XL Tile 2x2 */}
+          <div className={`tile-style md:col-span-2 md:row-span-2 reveal-up`}>
+            <p className="text-neutral-400">XL Tile 1 (2x2)</p>
           </div>
           
-          {/* Tile 2: Standard 1x1 */}
-          <div className={`tile-style`}>
-            <p className="text-neutral-400">SM Tile (1x1)</p>
+          {/* Tile 2: Standard Tile 1x1 */}
+          <div className={`tile-style reveal-up`}>
+            <p className="text-neutral-400">SM Tile 2 (1x1)</p>
           </div>
 
-          {/* Tile 3: Standard 1x1 */}
-          <div className={`tile-style`}>
-            <p className="text-neutral-400">SM Tile (1x1)</p>
+          {/* Tile 3: Tall Tile 2x1 */}
+          <div className={`tile-style md:row-span-2 reveal-up`}>
+            <p className="text-neutral-400">MD Tile 3 (2x1)</p>
           </div>
 
-          {/* Tile 4: Spans 2 columns */}
-          <div className={`tile-style md:col-span-2`}>
-            <p className="text-neutral-400">MD Tile (2x1)</p>
+          {/* Tile 4: Tall Tile 2x1 \\\ */}
+          <div className={`tile-style md:row-span-2 reveal-up`}>
+            <p className="text-neutral-400">SM Tile 4 (2x1)</p>
           </div>
 
-          {/* Tile 5: Spans 2 rows (Tall) */}
-          <div className={`tile-style md:row-span-2`}>
-            <p className="text-neutral-400">LG Tile (1x2)</p>
+          {/* Tile 5: Standard Tile 1x1 */}
+          <div className={`tile-style reveal-up`}>
+            <p className="text-neutral-400">SM Tile 5 (1x1)</p>
           </div>
 
-          {/* Tile 6: Standard 1x1 */}
-          <div className={`tile-style`}>
-            <p className="text-neutral-400">SM Tile (1x1)</p>
+          {/* Tile 6: Wide Tile 1x2 */}
+          <div className={`tile-style md:col-span-2 reveal-up`}>
+            <p className="text-neutral-400">MD Tile 6 (1x2)</p>
           </div>
 
         </div>
