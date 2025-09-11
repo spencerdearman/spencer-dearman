@@ -52,24 +52,14 @@ const Navbar = ({ navOpen }) => {
       className: 'nav-link'
     },
     {
-      label: 'Experience',
+      label: 'Explore',
       link: '#experience',
-      className: 'nav-link'
-    },
-    {
-      label: 'Work',
-      link: '#work',
-      className: 'nav-link'
-    },
-    {
-      label: 'Courses',
-      link: '#courses',
       className: 'nav-link'
     },
     {
       label: 'Contact',
       link: '#contact',
-      className: 'nav-link md:hidden'
+      className: 'nav-link'
     },
   ];
 

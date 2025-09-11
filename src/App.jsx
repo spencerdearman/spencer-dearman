@@ -28,7 +28,6 @@ import About from "./components/About";
 import Experience from "./components/Experience"
 import Skill from "./components/Skill";
 import Work from "./components/Work";
-import Courses from "./components/Courses";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -63,7 +62,6 @@ const App = () => {
         <Experience />
         <Skill />
         <Work />
-        <Courses />
         <Contact />
       </main>
       <Footer />

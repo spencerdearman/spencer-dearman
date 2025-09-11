@@ -94,6 +94,69 @@ body {
 }
 
 /* ---------------------------------- *\
+ * NAVBAR
+\* ---------------------------------- */
+
+.navbar {
+  @apply absolute 
+  top-full 
+  mt-2 right-0 min-w-40 p-2 
+  bg-neutral-100/5
+  rounded-[30px]
+  ring-inset 
+  ring-1 ring-neutral-300/15
+  shadow-xl
+  /* 360 shadow */
+  shadow-[0_0_4px_0_rgba(0,0,0,0.2)]
+  isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] 
+  md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-3xl;
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible;
+}
+
+.nav-link {
+  @apply grid 
+  items-center 
+  h-9 px-4 
+  text-sm 
+  font-medium 
+  tracking-wide 
+  text-neutral-900/60
+  hover:text-neutral-400 transition-colors;
+}
+
+.nav-link.active {
+  @apply text-neutral-900 duration-500;
+}
+
+.navbar .active-box {
+  /* Absolute positioning */
+  @apply absolute 
+  /* Selected tile background */ 
+  bg-neutral-300/50
+  /* Ring around the selected button */
+  ring-1 ring-neutral-500/10
+  /* Corner radius selected tile */
+  rounded-[20px]
+  /* Z-index -10 */
+  -z-10 
+  /* Animation centered on the top left */
+  transition-[top,left] 
+  /* Sliding animation duration ms */
+  duration-500;
+}
+
+
+.active-box {
+  @apply absolute bg-white rounded-full shadow-sm;
+  /* This is the magic for the smooth animation */
+  /* (0.25, 0.46, 0.45, 0.94); */
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* ---------------------------------- *\
  * HERO
 \* ---------------------------------- */
 
@@ -112,6 +175,26 @@ body {
   to-50% 
   rounded-[500px] 
   overflow-hidden;
+}
+
+/* ---------------------------------- *\
+ * ABOUT
+\* ---------------------------------- */
+
+.about-container {
+  @apply absolute 
+  top-full 
+  bg-neutral-300/5
+  rounded-[30px]
+  shadow-[0_0_4px_0_rgba(0,0,0,0.2)]
+  isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] 
+  md:static md:p-12 md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-3xl;
+}
+
+.about-content {
+ @apply text-neutral-900/60
+ mb-4 
+ md:mb-8 md:text-xl md:max-w-[60ch];
 }
 
 /* ---------------------------------- *\
@@ -188,61 +271,6 @@ body {
   hover:bg-neutral-50/15 transition-[transform,background-color] active:scale-95;
 }
 
-/* Navbar */
-
-.navbar {
-  @apply absolute 
-  top-full 
-  mt-2 right-0 min-w-40 p-2 
-  bg-zinc-100/5
-  /* bg-zinc-50/10  */
-  rounded-[30px]
-  ring-inset 
-  ring-1 ring-neutral-300/15
-  /* ring-1 ring-zinc-50/5 scale-90  */
-  shadow-xl
-  /* 360 shadow */
-  shadow-[0_0_4px_0_rgba(0,0,0,0.2)]
-  isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] 
-  md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-3xl;
-}
-
-.navbar.active {
-  @apply opacity-100 scale-100 blur-0 visible;
-}
-
-.nav-link {
-  @apply grid 
-  items-center 
-  h-9 px-4 
-  text-sm 
-  font-medium 
-  tracking-wide 
-  text-neutral-900/60
-  hover:text-neutral-400 transition-colors;
-}
-
-.nav-link.active {
-  @apply text-neutral-900 duration-500;
-}
-
-.navbar .active-box {
-  /* Absolute positioning */
-  @apply absolute 
-  /* Selected tile background */ 
-  bg-neutral-300/50
-  /* Ring around the selected button */
-  ring-1 ring-neutral-500/10
-  /* Corner radius selected tile */
-  rounded-[30px]
-  /* Z-index -10 */
-  -z-10 
-  /* Animation centered on the top left */
-  transition-[top,left] 
-  /* Sliding animation duration ms */
-  duration-500;
-}
-
 /* Button */
 
 .btn {
@@ -276,15 +304,15 @@ body {
 
 .btn-primary {
   @apply h-11 
-  bg-sky-400 
+  bg-neutral-100 
   text-zinc-950 
   hover:bg-sky-300 active:bg-sky-400;
 }
 
 .btn-outline {
   @apply h-11 
-  bg-zinc-800 
-  hover:bg-zinc-700 active:bg-zinc-800;
+  bg-neutral-300/50
+  hover:bg-neutral-400 active:bg-neutral-400;
 }
 
 /* Text field */
