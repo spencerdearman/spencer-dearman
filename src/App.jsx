@@ -25,7 +25,6 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Explore from "./components/Explore"
-import Skill from "./components/Skill";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -97,7 +96,6 @@ const App = () => {
       <main>
         <Hero />
         <Explore />
-        <Skill />
         <Work />
         <Contact />
       </main>

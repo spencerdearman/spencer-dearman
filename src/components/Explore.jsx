@@ -4,6 +4,7 @@
  */
 
 import SkillIcon from "./SkillIcon";
+import Adrenaline from "./Adrenaline"
 
 const skillIcons = [
   {
@@ -104,10 +105,13 @@ const Explore = () => {
           </div>
 
           {/* Tile 3: Tall Tile 2x1 */}
-          <div className="md:row-span-2 p-2">
-          <div className={`tile-style aspect-[1/2]`}>
-            <p className="text-neutral-400">MD Tile 3 (2x1)</p>
-          </div>
+          <div className="md:row-span-2 p-2 relative"> {/* 1. Add `relative` to the wrapper */}
+            {/* This div is JUST the background tile. It's empty but keeps the grid shape. */}
+            <div className="tile-style aspect-[1/2]"></div>
+            {/* 2. This div floats the Adrenaline component on TOP of the background tile. */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5/6">
+              <Adrenaline />
+            </div>
           </div>
 
           {/* Tile 4: Tall Tile 2x1 \\\ */}
