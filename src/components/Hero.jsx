@@ -9,11 +9,21 @@ const Hero = () => {
       id="home"
       className="pt-28 lg:pt-36"
     >
-      <div className="container items-center lg:grid lg:grid-cols-2 lg:gap-10">
+      {/* MODIFIED THIS CONTAINER: 
+        - Switched from Grid to Flexbox on large screens.
+        - Added flex-col for mobile stacking.
+        - Added justify-center to center the content.
+        - Increased the gap for better visual balance.
+      */}
+      <div className="container flex flex-col lg:flex-row items-center justify-center lg:gap-32">
         
-        <div>
+        {/*
+          MODIFIED THIS DIV:
+          - Added text alignment classes to center text on mobile and left-align on desktop.
+        */}
+        <div className="text-center lg:text-left">
           {/* Name */}
-          <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-2">
+          <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-2 mx-auto lg:mx-0">
             Spencer Dearman
           </h2>
 
@@ -26,9 +36,9 @@ const Hero = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center lg:justify-start gap-3">
             <ButtonOutline
-              href="#about"
+              href="#explore"
               label="Scroll down"
               icon="arrow_downward"
             />

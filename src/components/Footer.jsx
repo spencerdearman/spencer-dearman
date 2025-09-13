@@ -16,27 +16,11 @@ const sitemap = [
     href: '#home'
   },
   {
-    label: 'About',
-    href: '#about'
+    label: 'Explore',
+    href: '#explore'
   },
   {
-    label: 'Experience',
-    href: '#experience'
-  },
-  {
-    label: 'Work',
-    href: '#work'
-  },
-  {
-    label: 'Courses',
-    href: '#courses'
-  },
-  {
-    label: 'Personal',
-    href: '#personal'
-  },
-  {
-    label: 'Contact me',
+    label: 'Contact',
     href: '#contact'
   }
 
