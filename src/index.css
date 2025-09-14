@@ -209,7 +209,22 @@ body {
   flex 
   items-center 
   justify-center
-  /* NEW */
+  transition-all
+  duration-200
+  ease-in-out
+  hover:scale-105
+  hover:shadow-lg;
+}
+
+.arrow-button {
+  @apply bg-white 
+  rounded-[36px] 
+  /* overflow-hidden  */
+  p-2 
+  aspect-square 
+  flex 
+  items-center 
+  justify-center
   transition-all
   duration-200
   ease-in-out
@@ -242,6 +257,16 @@ body {
           whitespace-nowrap
           
           pointer-events-none;
+}
+
+.adrenaline-rotation {
+  @apply absolute 
+  top-1/2 left-1/2 
+  -translate-x-1/2 -translate-y-1/2 w-5/6
+      origin-top
+      transition-transform duration-300 ease-in-out
+      transform rotate-[10deg] 
+      group-hover:rotate-0 group-hover:scale-100;
 }
 
 /* ---------------------------------- *\
