@@ -101,19 +101,7 @@ const Explore = () => {
   return (
     <section id="explore" className="section">
       <div className="container mx-auto px-4 py-16">
-        {/* Grid container:
-          - `grid`:  Sets the display to grid.
-          - `grid-cols-3`: Creates a grid with 4 equal-width columns on medium screens and up.
-          - `grid-cols-1`: Makes it a single column on small screens (mobile).
-          - `gap-4`: Sets the spacing between all grid items.
-        */}
         <div className="grid grid-cols-1 md:grid-cols-3">
-          {/* Grid Items:
-            - Use `col-span-*` to define how many columns an item should span.
-            - Use `row-span-*` to define how many rows an item should span.
-            - I'm using placeholder styles for now. You'll replace these divs with your project cards.
-          */}
-
           {/* Tile 1: XL Tile 2x2 */}
           {/* Google Tile */}
           <div className="md:col-span-2 px-12 py-4 md:p-2">
@@ -156,37 +144,6 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 5: Standard Tile 1x1 */}
-          <div className="md:row-span-2 md:col-span-2 px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[1/1]`}>
-              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
-            </div>
-          </div>
-
-          {/* Tile 5: Standard Tile 1x1 */}
-          <div className="px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[2/2]`}>
-              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
-            </div>
-          </div>
-
-          {/* Tile 5: Standard Tile 1x1 */}
-          <div className="px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[1/1]`}>
-              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
-              <div className="adrenaline-rotation">
-                <PhotosTile />
-              </div>
-            </div>
-          </div>
-
-          {/* Tile 4: Tall Tile 2x1 \\\ */}
-          <div className="md:row-span-2 px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[1/2]`}>
-              <p className="text-neutral-400">SM Tile 4 (2x1)</p>
-            </div>
-          </div>
-
           {/* Tile 6: Wide Tile 1x2 */}
           <div className="md:col-span-2 px-12 py-4 md:p-2">
             {/* Add the "relative" class here */}
@@ -199,6 +156,27 @@ const Explore = () => {
               </div>
               {/* Add the ArrowButton component */}
               <ArrowButton href="https://home.google.com/welcome/" />
+            </div>
+          </div>
+
+          {/* Tile 5: Standard Tile 1x1 */}
+          <div className="px-12 py-4 md:p-2">
+            <div className={`tile-style aspect-[2/2]`}>
+              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
+            </div>
+          </div>
+
+          {/* Tile 4: Tall Tile 2x1 \\\ */}
+          <div className="md:row-span-2 px-12 py-4 md:p-2">
+            <div className={`tile-style aspect-[1/2]`}>
+              <p className="text-neutral-400">SM Tile 4 (2x1)</p>
+            </div>
+          </div>
+
+          {/* Tile 5: Standard Tile 1x1 */}
+          <div className="md:md:col-span-2 px-12 py-4 md:p-2">
+            <div className={`tile-style aspect-[2/1]`}>
+              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
             </div>
           </div>
         </div>

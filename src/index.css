@@ -26,7 +26,6 @@ body {
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
   -webkit-background-clip: text;
-  /* -webkit-text-fill-color: transparent; */ /* FOR GRADIENT */
   @apply text-3xl 
   lg:text-4xl lg:leading-tight font-semibold;
 }
@@ -67,7 +66,6 @@ body {
 
 .container {
   @apply px-4 mx-auto 
-  /* lg:px-8 xl:max-w-6xl; */
   lg:px-8 xl:max-w-7xl;
 }
 
@@ -97,17 +95,17 @@ body {
 \* ---------------------------------- */
 
 .navbar {
-  @apply static                 /* Always static, never absolute */
-  flex                   /* Always a flex container */
-  items-center           /* Always vertically centered */
-  p-2                    /* Keep padding for the container */
+  @apply static 
+  flex
+  items-center
+  p-2  
   bg-neutral-100/5
   rounded-[30px]
   ring-inset 
   ring-1 ring-neutral-300/15
   shadow-xl
   shadow-[0_0_4px_0_rgba(0,0,0,0.2)]
-  backdrop-blur-3xl; /* Always visible, no transitions needed */
+  backdrop-blur-3xl;
 }
 
 .navbar.active {
@@ -152,7 +150,6 @@ body {
 
 .profile-image {
   @apply w-full 
-  /* Max width */
   md:max-w-[480px] 
   max-w-[300px]
   aspect-square
@@ -198,8 +195,7 @@ body {
 
 .app-icon {
   @apply bg-white 
-  rounded-[24px] 
-  /* overflow-hidden  */
+  rounded-[24px]
   p-2 
   aspect-square 
   flex 
