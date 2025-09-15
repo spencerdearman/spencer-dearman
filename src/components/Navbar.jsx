@@ -3,24 +3,23 @@
  * @license Apache-2.0
  */
 
-
 /**
  * Node modules
  */
-import { useRef, useEffect } from "react";
-import PropTypes from "prop-types";
-
+import { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Navbar = ({ navOpen }) => {
   const lastActiveLink = useRef();
   const activeBox = useRef();
 
   const initActiveBox = () => {
+    if (!lastActiveLink.current) return;
     activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
     activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px';
     activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
     activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px';
-  }
+  };
 
   useEffect(() => {
     initActiveBox();
@@ -37,52 +36,55 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.left = event.target.offsetLeft + 'px';
     activeBox.current.style.width = event.target.offsetWidth + 'px';
     activeBox.current.style.height = event.target.offsetHeight + 'px';
-  }
+  };
 
   const navItems = [
     {
       label: 'Home',
       link: '#home',
       className: 'nav-link active',
-      ref: lastActiveLink
+      ref: lastActiveLink,
     },
     {
       label: 'Explore',
       link: '#explore',
-      className: 'nav-link'
+      className: 'nav-link',
     },
     {
       label: 'Contact',
       link: '#contact',
-      className: 'nav-link'
+      className: 'nav-link',
     },
   ];
 
   return (
-    <nav className={'navbar ' + (navOpen ? 'active' : '')}>
-      {
-        navItems.map(({ label, link, className, ref }, key) => (
-          <a
-            href={link}
-            key={key}
-            ref={ref}
-            className={className}
-            onClick={activeCurrentLink}
-          >
-            {label}
-          </a>
-        ))
-      }
+    <nav
+      className={`navbar flex items-center p-1 relative ${
+        navOpen ? 'active' : ''
+      }`}
+    >
+      {navItems.map(({ label, link, className, ref }, key) => (
+        <a
+          href={link}
+          key={key}
+          ref={ref}
+          // 2. SPACING REDUCED: Padding and min-width are smaller. No rounding here.
+          className={`${className} px-3 py-1.5 min-w-[80px] text-center transition-colors duration-300 relative z-10`}
+          onClick={activeCurrentLink}
+        >
+          {label}
+        </a>
+      ))}
       <div
-        className="active-box"
+        className="active-box bg-white shadow-sm rounded-full"
         ref={activeBox}
       ></div>
     </nav>
-  )
-}
+  );
+};
 
 Navbar.propTypes = {
-  navOpen: PropTypes.bool.isRequired
-}
+  navOpen: PropTypes.bool.isRequired,
+};
 
-export default Navbar
+export default Navbar;

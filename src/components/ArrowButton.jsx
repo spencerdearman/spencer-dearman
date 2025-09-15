@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const ArrowButton = ({ href }) => {
   return (
@@ -15,7 +15,7 @@ const ArrowButton = ({ href }) => {
         src="/images/arrow.svg"
         alt="Arrow Icon"
         className="
-          w-8 h-8
+        w-full h-auto p-0.5
         "
       />
     </a>
@@ -28,7 +28,7 @@ ArrowButton.propTypes = {
 };
 
 ArrowButton.defaultProps = {
-  href: "#",
+  href: '#',
 };
 
 export default ArrowButton;
