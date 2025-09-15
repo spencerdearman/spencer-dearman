@@ -7,6 +7,7 @@ import SkillIcon from './SkillIcon';
 import Adrenaline from './Adrenaline';
 import ArrowButton from './ArrowButton';
 import PhotosTile from './PhotosTile';
+import PintosTile from './PintosTile';
 
 const works = [
   {
@@ -102,8 +103,7 @@ const Explore = () => {
     <section id="explore" className="section">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3">
-          {/* Tile 1: XL Tile 2x2 */}
-          {/* Google Tile */}
+          {/* Tile 1: Introduction */}
           <div className="md:col-span-2 px-12 py-4 md:p-2">
             <div className={`tile-style aspect-[2/1]`}>
               <p className="about-content">
@@ -118,7 +118,7 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 2: Standard Tile 1x1 */}
+          {/* Tile 2: Skills */}
           <div className="px-12 py-4 md:p-2">
             <div className="tile-style aspect-square">
               {/* This is the new 3x3 grid for your app icons */}
@@ -134,7 +134,7 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 3: Final Corrected Version */}
+          {/* Tile 3: Adrenaline App */}
           <div className="md:row-span-2 px-12 py-4 md:p-2 group">
             <div className="tile-style aspect-[1/2] relative overflow-hidden">
               <div className="adrenaline-rotation">
@@ -144,7 +144,7 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 6: Wide Tile 1x2 */}
+          {/* Tile 4: Google Home */}
           <div className="md:col-span-2 px-12 py-4 md:p-2">
             {/* Add the "relative" class here */}
             <div className="tile-style aspect-square md:aspect-[2/1] relative">
@@ -159,10 +159,18 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 5: Standard Tile 1x1 */}
+          {/* Tile 5: Infleqtion */}
           <div className="px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[2/2]`}>
-              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
+            {/* Add the "relative" class here */}
+            <div className="tile-style aspect-square md:aspect-square relative">
+              <div className="w-1/6">
+                <SkillIcon
+                  imgSrc={'/images/infleqtion.png'}
+                  label={'Infleqtion'}
+                />
+              </div>
+              {/* Add the ArrowButton component */}
+              <ArrowButton href="https://github.com/Infleqtion/client-superstaq/tree/f0108407c0440401bf452d92141cfbaa05e564e1/docs/source/apps/supermarq/examples/qre-challenge" />
             </div>
           </div>
 
@@ -174,9 +182,9 @@ const Explore = () => {
           </div>
 
           {/* Tile 5: Standard Tile 1x1 */}
-          <div className="md:md:col-span-2 px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[2/1]`}>
-              <p className="text-neutral-400">SM Tile 5 (1x1)</p>
+          <div className="md:md:col-span-2 px-12 py-4 md:p-2 group">
+            <div className={`tile-style aspect-[2/1] relative overflow-hidden`}>
+              <PintosTile />
             </div>
           </div>
         </div>
