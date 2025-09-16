@@ -8,6 +8,7 @@ import Adrenaline from './Adrenaline';
 import ArrowButton from './ArrowButton';
 import PhotosTile from './PhotosTile';
 import PintosTile from './PintosTile';
+import PintosTerminalTile from './PintosTerminalTile';
 
 const works = [
   {
@@ -182,9 +183,10 @@ const Explore = () => {
           </div>
 
           {/* Tile 5: Standard Tile 1x1 */}
-          <div className="md:md:col-span-2 px-12 py-4 md:p-2 group">
-            <div className={`tile-style aspect-[2/1] relative overflow-hidden`}>
-              <PintosTile />
+          <div className="md:col-span-2 px-12 py-4 md:p-2 group">
+            <div className={`aspect-square tile-style md:aspect-[2/1] relative overflow-hidden`}>
+              {/* <PintosTile /> */}
+              <PintosTerminalTile />
             </div>
           </div>
         </div>

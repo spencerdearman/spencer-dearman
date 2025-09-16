@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-// Icons from React Icons
 import { PiCpu, PiUsersThree, PiMemory, PiFiles, PiX } from 'react-icons/pi';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const pintosProjects = [
   {
@@ -70,65 +69,57 @@ const ProjectWindow = ({ project, onClose }) => {
   );
 };
 
-const PintosTile = () => {
+const PintosTerminalTile = () => {
   const [activeProject, setActiveProject] = useState(null);
-
   const handleOpenProject = (project) => setActiveProject(project);
   const handleCloseProject = () => setActiveProject(null);
 
   return (
-    <div
-      className="absolute inset-0 p-4 flex flex-col justify-between text-white
-                    bg-transparent group-hover:bg-slate-900 
-                    transition-colors duration-300 ease-in-out"
-    >
-      {/* --- The "Desktop" --- */}
-      <div className="z-10">
-        <h2 className="text-2xl font-bold text-cyan-400">
-          PintOS x86 Operating System
-        </h2>
-        <div className="hidden md:block md:text-slate-300">
-          <p>
-            ● Engineered a comprehensive virtual memory system for a
-            multitasking kernel, implementing on-demand paging, a frame eviction
-            policy using the clock algorithm, and a system call interface to
-            manage processes, memory-mapped files, and stack growth.
-          </p>
-          <p>
-            ● Designed and implemented a high-performance, Unix-like filesystem
-            featuring a write-behind buffer cache, extensible files using a
-            multi-level index structure, and a hierarchical directory with
-            fine-grained locks and semaphores to protect concurrent accesses.
-          </p>
+    <div className="w-full h-full flex flex-col font-mono bg-slate-800 rounded-xl overflow-hidden">
+      {/* --- Title Bar --- */}
+      <div className="flex items-center p-3 bg-slate-900">
+        <div className="flex space-x-2">
+          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+        </div>
+        <p className="flex-grow text-center text-sm text-slate-400">
+          user@spencer: ~/pintOS
+        </p>
+      </div>
+
+      {/* --- Terminal Content --- */}
+      <div className="p-6 text-slate-300">
+        <div className="flex items-center">
+          <span>~/pintOS/projects $</span>
+          <span className="w-2 h-4 bg-cyan-400 ml-2 cursor-blink"></span>
+        </div>
+
+        {/* --- Clickable File List --- */}
+        <div className="mt-4 grid grid-cols-2 gap-x-8 gap-y-4">
+          {pintosProjects.map((project) => (
+            <button
+              key={project.id}
+              onClick={() => handleOpenProject(project)}
+              className="flex items-center gap-3 text-left text-cyan-400 hover:text-white transition-colors"
+            >
+              <project.Icon className="w-5 h-5" />
+              <span>{project.filename}</span>
+            </button>
+          ))}
         </div>
       </div>
 
-      <hr className="hidden md:block border-slate-700" />
-
-      {/* --- The "Icons" --- */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 flex-grow md:flex-grow-0">
-        {pintosProjects.map((project) => (
-          <button
-            key={project.id}
-            onClick={() => handleOpenProject(project)}
-            className="flex flex-col items-center gap-2 p-4 text-center transition-colors bg-white/5 hover:bg-white/10 rounded-[20px]"
-          >
-            <project.Icon className="w-10 h-10 text-cyan-400" />
-            <span className="font-mono text-xs text-slate-300">
-              {project.filename}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      {/* --- The Modal Window Area --- */}
       <AnimatePresence>
         {activeProject && (
-          <ProjectWindow project={activeProject} onClose={handleCloseProject} />
+          <ProjectWindow
+            project={activeProject}
+            onClose={handleCloseProject} 
+          />
         )}
       </AnimatePresence>
     </div>
   );
 };
 
-export default PintosTile;
+export default PintosTerminalTile;

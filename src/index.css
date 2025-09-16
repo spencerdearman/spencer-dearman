@@ -196,6 +196,8 @@ body {
 .app-icon {
   @apply bg-white 
   rounded-[24px]
+  sm:rounded-[28px]
+  lg:rounded-[24px]
   p-2 
   aspect-square 
   flex 
@@ -226,7 +228,7 @@ body {
 
 .app-tooltip {
   @apply /* Positioning */
-          absolute bottom-full mb-2 left-1/2 -translate-x-1/2
+  absolute bottom-full mb-2 left-1/2 -translate-x-1/2
           
           /* Styling */
           bg-neutral-300/80 
@@ -249,6 +251,15 @@ body {
           whitespace-nowrap
           
           pointer-events-none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.cursor-blink {
+  animation: blink 1.2s step-end infinite;
 }
 
 .adrenaline-rotation {
