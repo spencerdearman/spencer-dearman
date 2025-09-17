@@ -6,9 +6,7 @@
 import SkillIcon from './SkillIcon';
 import Adrenaline from './Adrenaline';
 import ArrowButton from './ArrowButton';
-import PhotosTile from './PhotosTile';
 import PintosTile from './PintosTile';
-import PintosTerminalTile from './PintosTerminalTile';
 
 const works = [
   {
@@ -175,18 +173,19 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 4: Tall Tile 2x1 \\\ */}
+          {/* Tile 6: Tall Tile 2x1 \\\ */}
           <div className="md:row-span-2 px-12 py-4 md:p-2">
             <div className={`tile-style aspect-[1/2]`}>
               <p className="text-neutral-400">SM Tile 4 (2x1)</p>
             </div>
           </div>
 
-          {/* Tile 5: Standard Tile 1x1 */}
+          {/* Tile 7: PintOS */}
           <div className="md:col-span-2 px-12 py-4 md:p-2 group">
-            <div className={`aspect-square tile-style md:aspect-[2/1] relative overflow-hidden`}>
-              {/* <PintosTile /> */}
-              <PintosTerminalTile />
+            <div
+              className={`aspect-square tile-style md:aspect-[2/1] relative overflow-hidden`}
+            >
+              <PintosTile />
             </div>
           </div>
         </div>
