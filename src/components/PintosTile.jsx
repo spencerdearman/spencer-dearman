@@ -108,30 +108,19 @@ const ProjectWindow = ({ project, onClose }) => {
 
 const PintosTile = () => {
   const [activeProject, setActiveProject] = useState(null);
-  const [isMinimized, setIsMinimized] = useState(false);
-
-  const handleMinimizeToggle = () => {
-    setIsMinimized(!isMinimized);
-  };
+  const [isMinimized] = useState(false);
 
   const springTransition = { type: 'spring', stiffness: 400, damping: 40 };
 
   return (
     <div className="w-full h-full flex items-center justify-center">
-      {/* 1. This is now a SINGLE animated container */}
       <motion.div
         layout
         transition={springTransition}
-        // 2. The component's entire style changes based on state
         className={
-          isMinimized
-            ? 'flex flex-col items-center justify-center w-24 h-24 cursor-pointer'
-            : 'w-full h-full flex flex-col font-mono bg-neutral-100/80 rounded-xl overflow-hidden shadow-lg cursor-text'
+           'w-full h-full flex flex-col font-mono bg-neutral-100/80 rounded-xl overflow-hidden shadow-lg cursor-text'
         }
-        // 3. The click handler also changes based on state
-        onClick={isMinimized ? handleMinimizeToggle : undefined}
       >
-        {/* 4. AnimatePresence now fades the CONTENT inside the container */}
         <AnimatePresence mode="wait">
           {isMinimized ? (
             <motion.div
@@ -172,12 +161,9 @@ const PintosTile = () => {
                   <div className="group w-3 h-3 bg-red-500 rounded-full flex items-center justify-center">
                     <PiX className="w-2 h-2 text-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <button
-                    onClick={handleMinimizeToggle}
-                    className="group w-3 h-3 bg-yellow-400 rounded-full flex items-center justify-center"
-                  >
+                  <div className="group w-3 h-3 bg-yellow-400 rounded-full flex items-center justify-center">
                     <PiMinus className="w-2 h-2 text-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </button>
+                  </div>
                   <div className="group w-3 h-3 bg-green-500 rounded-full flex items-center justify-center">
                     <PiPlus className="w-2 h-2 text-black/60 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -186,6 +172,7 @@ const PintosTile = () => {
                   user@spencer: ~/pintos
                 </p>
               </div>
+
               {/* Terminal Content */}
               <div className="p-6 text-neutral-300 flex-grow flex flex-col">
                 <div className="flex text-neutral-900/60 items-center">

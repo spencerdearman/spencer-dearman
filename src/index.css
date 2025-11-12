@@ -272,6 +272,16 @@ body {
       group-hover:rotate-0 group-hover:scale-100;
 }
 
+.canopy-rotation {
+  @apply absolute 
+  top-1/2 left-1/2 
+  -translate-x-1/2 -translate-y-1/2 w-5/6
+      origin-top
+      transition-transform duration-300 ease-in-out
+      transform rotate-[-10deg] 
+      group-hover:rotate-0 group-hover:scale-100;
+}
+
 /* ---------------------------------- *\
  * HEADER
 \* ---------------------------------- */

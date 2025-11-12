@@ -31,7 +31,7 @@ const Hero = () => {
             University of Chicago Student
           </p>
           <p className="text-2xl font-medium text-left mb-6">
-            Google Software Engineering Intern
+            Incoming Google Software Engineer
           </p>
 
           {/* Buttons */}
