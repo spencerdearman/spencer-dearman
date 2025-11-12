@@ -23,6 +23,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Explore from './components/Explore';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
   /**
@@ -91,6 +92,7 @@ const App = () => {
         <Hero />
         <Explore />
         <Contact />
+        <Footer />
       </main>
     </ReactLenis>
   );

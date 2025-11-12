@@ -268,7 +268,7 @@ body {
   -translate-x-1/2 -translate-y-1/2 w-5/6
       origin-top
       transition-transform duration-300 ease-in-out
-      transform rotate-[10deg] 
+      transform rotate-[-10deg] 
       group-hover:rotate-0 group-hover:scale-100;
 }
 
@@ -278,7 +278,7 @@ body {
   -translate-x-1/2 -translate-y-1/2 w-5/6
       origin-top
       transition-transform duration-300 ease-in-out
-      transform rotate-[-10deg] 
+      transform rotate-[10deg] 
       group-hover:rotate-0 group-hover:scale-100;
 }
 

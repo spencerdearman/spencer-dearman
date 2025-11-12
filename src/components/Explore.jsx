@@ -48,33 +48,75 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 3: Adrenaline App */}
-          <div className="md:row-span-2 px-12 py-4 md:p-2 group">
-            <div className="tile-style aspect-[1/2] relative overflow-hidden">
-              <div className="adrenaline-rotation">
-                <Adrenaline />
+          {/* Tile 3: Canopy App */}
+          <div className="md:row-span-2 px-12 py-4 md:p-2 group relative">
+            <div
+              className={`tile-style aspect-[1/2] relative overflow-hidden ${
+                focusedTile === 'canopy' ? 'z-30' : ''
+              }`}
+            >
+              <div className="canopy-rotation">
+                <Canopy />
               </div>
-              <ArrowButton href="https://github.com/spencerdearman/adrenaline-app" />
+              <div
+                onMouseEnter={() => setFocusedTile('canopy')}
+                onMouseLeave={() => setFocusedTile(null)}
+              >
+                <ArrowButton href="https://www.figma.com/design/BQJLTXgtZy8YpgePxvmOx9/Assignment-5---Spencer-Dearman?node-id=85-5224&t=F5kGEKt38UUZNvFL-1" />
+              </div>
+            </div>
+            <div
+              className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
+                focusedTile === 'canopy'
+                  ? 'opacity-100 z-30'
+                  : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <p className="font-semibold text-gray-800">Canopy App</p>
+              <p className="text-sm text-gray-500">A plant care app</p>
             </div>
           </div>
 
           {/* Tile 4: Google Home */}
-          <div className="md:col-span-2 px-12 py-4 md:p-2">
-            <div className="tile-style aspect-square md:aspect-[2/1] relative">
+          <div className="md:col-span-2 px-12 py-4 md:p-2 relative">
+            <div
+              className={`tile-style aspect-square md:aspect-[2/1] relative ${
+                focusedTile === 'google-home' ? 'z-30' : ''
+              }`}
+            >
               <div className="w-1/6">
                 <SkillIcon
                   imgSrc={'/images/google-home.svg'}
                   label={'Google Home'}
                 />
               </div>
-              <ArrowButton href="https://home.google.com/welcome/" />
+              <div
+                onMouseEnter={() => setFocusedTile('google-home')}
+                onMouseLeave={() => setFocusedTile(null)}
+              >
+                <ArrowButton href="https://home.google.com/welcome/" />
+              </div>
+            </div>
+            <div
+              className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-600 ease-in-out ${
+                focusedTile === 'google-home'
+                  ? 'opacity-100 z-30'
+                  : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <p className="font-semibold text-gray-800">Google</p>
+              <p className="text-sm text-gray-500">
+                Software Engineering Internship
+              </p>
             </div>
           </div>
 
           {/* Tile 5: Infleqtion */}
           <div className="px-12 py-4 md:p-2 relative">
             <div
-              className={`tile-style aspect-square md:aspect-square relative group z-10`}
+              className={`tile-style aspect-square md:aspect-square relative group ${
+                focusedTile === 'infleqtion' ? 'z-30' : ''
+              }`}
             >
               <InfleqtionTile />
               <div
@@ -84,28 +126,48 @@ const Explore = () => {
                 <ArrowButton href="https://github.com/Infleqtion/client-superstaq/tree/f0108407c0440401bf452d92141cfbaa05e564e1/docs/source/apps/supermarq/examples/qre-challenge" />
               </div>
             </div>
-            {/* 2. THE TEXT IS HERE: Positioned absolutely so it does NOT affect the grid layout. */}
             <div
               className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
                 focusedTile === 'infleqtion'
-                  ? 'opacity-100 z-10'
+                  ? 'opacity-100 z-30'
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">
-                Quantum Benchmarking
+              <p className="font-semibold text-gray-800">Infleqtion</p>
+              <p className="text-sm text-gray-500">
+                Quantum Software Engineering Internship
               </p>
-              <p className="text-sm text-gray-500">A project with Infleqtion</p>
             </div>
           </div>
 
-          {/* Tile 6: Tall Tile 2x1 \\\ */}
-          <div className="md:row-span-2 px-12 py-4 md:p-2 group">
-            <div className="tile-style aspect-[1/2] relative overflow-hidden">
-              <div className="canopy-rotation">
-                <Canopy />
+          {/* Tile 6: Adrenaline App */}
+          <div className="md:row-span-2 px-12 py-4 md:p-2 group relative">
+            <div
+              className={`tile-style aspect-[1/2] relative overflow-hidden ${
+                focusedTile === 'adrenaline' ? 'z-30' : ''
+              }`}
+            >
+              <div className="adrenaline-rotation">
+                <Adrenaline />
               </div>
-              <ArrowButton href="https://www.figma.com/design/BQJLTXgtZy8YpgePxvmOx9/Assignment-5---Spencer-Dearman?node-id=85-5224&t=F5kGEKt38UUZNvFL-1" />
+              <div
+                onMouseEnter={() => setFocusedTile('adrenaline')}
+                onMouseLeave={() => setFocusedTile(null)}
+              >
+                <ArrowButton href="https://github.com/spencerdearman/adrenaline-app" />
+              </div>
+            </div>
+            <div
+              className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
+                focusedTile === 'adrenaline'
+                  ? 'opacity-100 z-30'
+                  : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <p className="font-semibold text-gray-800">Adrenaline App</p>
+              <p className="text-sm text-gray-500">
+                An app for diving statistics and results
+              </p>
             </div>
           </div>
 
