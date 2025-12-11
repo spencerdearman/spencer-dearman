@@ -28,15 +28,13 @@ const Explore = () => {
         <div className="grid grid-cols-1 md:grid-cols-3">
           {/* Tile 1: Introduction */}
           <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-[2/1]`}>
-              <p className="about-content">
-                Hi! I&apos;m Spencer Dearman, a fourth-year student
-                pursuing a joint BS/MS degree in Computer Science with a
-                specialization in Computer Systems at the University of Chicago.
-                I have a strong interest in low-level programming, operating
-                systems, and mobile development. I will be returning to Google
-                this summer as a Software Engineer for Health and Home. 
-              </p>
+            <div className={`tile-style aspect-square md:aspect-[2/1]`}>
+              <div className="w-1/2 sm:w-1/6">
+                <SkillIcon
+                  imgSrc={'/images/google-home.svg'}
+                  label={'Google Home'}
+                />
+              </div>
             </div>
           </div>
 

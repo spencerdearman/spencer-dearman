@@ -12,7 +12,7 @@ html {
 
 body {
   /* Main website background */
-  @apply bg-white 
+  @apply bg-white
   /* Overall text color */
   text-black;
 }
@@ -81,8 +81,8 @@ body {
 }
 
 .section {
-  @apply pt-20 
-  lg:pt-32;
+  @apply pt-0
+  lg:pt-4;
 }
 
 .reveal-up {
@@ -183,7 +183,7 @@ body {
 \* ---------------------------------- */
 
 .tile-style {
-  @apply bg-neutral-300/50
+  @apply bg-apple-gray
   rounded-[30px]
   p-6 
   flex 

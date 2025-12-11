@@ -9,6 +9,10 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      colors: {
+        'apple-gray': "#f5f5f7",
+        'apple-secondary': "#fafafc",
+      }
     },
   },
   plugins: [tailwindScrollbar],
