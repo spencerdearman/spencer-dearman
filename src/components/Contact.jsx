@@ -67,9 +67,9 @@ const Contact = () => {
         <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
           <h2 className="headline-2 lg:max-w-[12ch] reveal-up">Contact Me</h2>
 
-          <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
+          {/* <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
             Reach out if you have any questions, ideas, or just want to chat!
-          </p>
+          </p> */}
 
           <div className="flex items-center gap-2 mt-auto">
             {socialLinks.map(({ href, icon }, key) => (

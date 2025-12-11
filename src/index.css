@@ -198,7 +198,8 @@ body {
   rounded-[24px]
   sm:rounded-[28px]
   lg:rounded-[24px]
-  p-2 
+  p-1
+  sm:p-2 
   aspect-square 
   flex 
   items-center 

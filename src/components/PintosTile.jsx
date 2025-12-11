@@ -69,7 +69,8 @@ const ProjectWindow = ({ project, onClose }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ ease: 'easeInOut', duration: 0.2 }}
-      className="absolute inset-0 z-20 flex items-center justify-center p-4"
+      // 1. Keep this absolute so it stays confined to the tile
+      className="absolute inset-0 z-20 flex items-center justify-center p-4 sm:p-4" 
     >
       {/* Backdrop */}
       <div
@@ -77,9 +78,10 @@ const ProjectWindow = ({ project, onClose }) => {
         onClick={onClose}
       ></div>
 
-      {/* Main Window: flex-col with a max-height */}
-      <div className="relative w-full max-w-md flex flex-col max-h-[90vh] rounded-lg bg-slate-700/50 ring-1 ring-white/20 shadow-2xl backdrop-blur-lg overflow-hidden">
-        {/* Title Bar: flex-shrink-0 prevents it from shrinking */}
+      {/* Main Window */}
+      {/* 2. CHANGE max-h-[90vh] TO max-h-full */}
+      <div className="relative w-full max-w-md flex flex-col max-h-full rounded-[18px] sm:rounded-lg bg-slate-700/50 ring-1 ring-white/20 shadow-2xl backdrop-blur-lg overflow-hidden">
+        {/* Title Bar */}
         <div className="flex-shrink-0 flex items-center justify-between bg-slate-800/70 p-2 text-sm">
           <p className="font-mono text-slate-300">{project.filename}</p>
           <button
@@ -90,7 +92,7 @@ const ProjectWindow = ({ project, onClose }) => {
           </button>
         </div>
 
-        {/* MODIFIED THIS LINE with flex-grow and min-h-0 */}
+        {/* Content Area - This will now scroll correctly */}
         <div className="flex-grow min-h-0 p-6 text-left overflow-y-auto">
           <h3 className="text-xl font-bold text-white text-center">
             {project.title}

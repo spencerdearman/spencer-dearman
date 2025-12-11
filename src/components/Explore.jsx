@@ -27,29 +27,28 @@ const Explore = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3">
           {/* Tile 1: Introduction */}
-          <div className="md:col-span-2 px-12 py-4 md:p-2">
+          <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2">
             <div className={`tile-style aspect-[2/1]`}>
               <p className="about-content">
-                Welcome! I&apos;m Spencer Dearman, a rising fourth-year student
+                Hi! I&apos;m Spencer Dearman, a fourth-year student
                 pursuing a joint BS/MS degree in Computer Science with a
                 specialization in Computer Systems at the University of Chicago.
                 I have a strong interest in low-level programming, operating
-                systems, and the algorithms that make systems run efficiently.
-                Currently, I&apos;m a Software Engineering Intern at Google in
-                Mountain View.
+                systems, and mobile development. I will be returning to Google
+                this summer as a Software Engineer for Health and Home. 
               </p>
             </div>
           </div>
 
           {/* Tile 2: Skills */}
-          <div className="px-12 py-4 md:p-2">
+          <div className="px-4 sm:px-12 py-4 md:p-2">
             <div className="tile-style aspect-square">
               <SkillsTile />
             </div>
           </div>
 
           {/* Tile 3: Canopy App */}
-          <div className="md:row-span-2 px-12 py-4 md:p-2 group relative">
+          <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
               className={`tile-style aspect-[1/2] relative overflow-hidden ${
                 focusedTile === 'canopy' ? 'z-30' : ''
@@ -78,13 +77,13 @@ const Explore = () => {
           </div>
 
           {/* Tile 4: Google Home */}
-          <div className="md:col-span-2 px-12 py-4 md:p-2 relative">
+          <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2 relative">
             <div
               className={`tile-style aspect-square md:aspect-[2/1] relative ${
                 focusedTile === 'google-home' ? 'z-30' : ''
               }`}
             >
-              <div className="w-1/6">
+              <div className="w-1/2 sm:w-1/6">
                 <SkillIcon
                   imgSrc={'/images/google-home.svg'}
                   label={'Google Home'}
@@ -112,7 +111,7 @@ const Explore = () => {
           </div>
 
           {/* Tile 5: Infleqtion */}
-          <div className="px-12 py-4 md:p-2 relative">
+          <div className="px-4 sm:px-12 py-4 md:p-2 relative">
             <div
               className={`tile-style aspect-square md:aspect-square relative group ${
                 focusedTile === 'infleqtion' ? 'z-30' : ''
@@ -141,7 +140,7 @@ const Explore = () => {
           </div>
 
           {/* Tile 6: Adrenaline App */}
-          <div className="md:row-span-2 px-12 py-4 md:p-2 group relative">
+          <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
               className={`tile-style aspect-[1/2] relative overflow-hidden ${
                 focusedTile === 'adrenaline' ? 'z-30' : ''
@@ -172,7 +171,7 @@ const Explore = () => {
           </div>
 
           {/* Tile 7: PintOS */}
-          <div className="md:col-span-2 px-12 py-4 md:p-2 group">
+          <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2 group">
             <div
               className={`aspect-square tile-style md:aspect-[2/1] relative overflow-hidden`}
             >

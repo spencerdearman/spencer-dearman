@@ -27,9 +27,9 @@ const skillIcons = [
     desc: 'Cloud Platform',
   },
   {
-    imgSrc: 'images/react.svg',
-    label: 'React',
-    desc: 'Framework',
+    imgSrc: 'images/figma.svg',
+    label: 'Figma',
+    desc: 'Design Tool',
   },
   {
     imgSrc: 'images/git.svg',

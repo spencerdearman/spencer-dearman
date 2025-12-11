@@ -20,25 +20,25 @@ const Hero = () => {
           </figure>
         </div>
 
-        <div className="text-left lg:text-left">
+        <div className="text-center sm:text-left">
           {/* Name */}
-          <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-2 mx-auto lg:mx-0">
+          <h2 className="headline-2 max-w-[15ch] sm:headline-1 sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-2 mx-auto lg:mx-0">
             Spencer Dearman
           </h2>
 
           {/* Subheadings with reduced margins */}
-          <p className="text-2xl font-medium text-left mb-1">
+          <p className="text-xl sm:text-2xl font-medium text-center sm:text-left mb-1">
             University of Chicago Student
           </p>
-          <p className="text-2xl font-medium text-left mb-6">
+          <p className="text-xl sm:text-2xl font-medium text-center sm:text-left mb-6">
             Incoming Google Software Engineer
           </p>
 
           {/* Buttons */}
-          <div className="flex items-center justify-start lg:justify-start gap-3">
+          <div className="flex items-center justify-center sm:justify-start gap-3">
             <ButtonOutline
               href="#explore"
-              label="Scroll down"
+              label="Explore"
               icon="arrow_downward"
             />
           </div>
