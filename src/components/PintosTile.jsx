@@ -70,7 +70,7 @@ const ProjectWindow = ({ project, onClose }) => {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ ease: 'easeInOut', duration: 0.2 }}
       // 1. Keep this absolute so it stays confined to the tile
-      className="absolute inset-0 z-20 flex items-center justify-center p-4 sm:p-4" 
+      className="absolute inset-0 z-20 flex items-center justify-center p-4 sm:p-4"
     >
       {/* Backdrop */}
       <div
@@ -120,7 +120,7 @@ const PintosTile = () => {
         layout
         transition={springTransition}
         className={
-           'w-full h-full flex flex-col font-mono bg-neutral-100/80 rounded-xl overflow-hidden shadow-lg cursor-text'
+          'w-full h-full flex flex-col font-mono bg-neutral-100/80 rounded-xl overflow-hidden shadow-lg cursor-text'
         }
       >
         <AnimatePresence mode="wait">

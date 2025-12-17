@@ -20,67 +20,65 @@ const Explore = () => {
       <div className="container mx-auto px-4 py-16">
         {/* The overlay */}
         <div
+          onClick={() => setFocusedTile(null)}
           className={`fixed inset-0 bg-gray-100/80 backdrop-blur-sm z-10 transition-opacity duration-500 ease-in-out ${
             focusedTile ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         />
-        
 
         <div className="grid grid-cols-1 md:grid-cols-3">
-
           {/* Tile 1: Google Home */}
-<div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2 relative group">
-  <div
-    className={`tile-style aspect-square md:aspect-[2/1] relative overflow-hidden ${
-      focusedTile === 'google-home' ? 'z-30' : ''
-    }`}
-  >
-    {/* ICON MOVED: Added absolute positioning to top-right */}
-    <div className="absolute hidden md:block top-6 left-6 w-16 md:w-20 z-20">
-      <div className="app-icon group relative">
-      <img src={'/images/google-home.png'} alt={'/images/google-home.png'} className="w-full h-auto p-1" />
-    </div>
-    </div>
+          <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2 relative group">
+            <div
+              className={`tile-style aspect-square md:aspect-[2/1] relative overflow-hidden ${
+                focusedTile === 'google-home' ? 'z-30' : ''
+              }`}
+            >
+              <div className="absolute hidden md:block top-6 left-6 w-16 md:w-16 xl:w-20 z-20">
+                <div className="app-icon group relative">
+                  <img
+                    src={'/images/google-home.png'}
+                    alt={'/images/google-home.png'}
+                    className="w-full h-auto p-1"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col justify-start pt-12 md:justify-center md:pt-0 h-full md:pl-6 md:pr-72 items-center md:items-start text-center md:text-left relative z-20 pointer-events-none">
+                <p className="text-xl xl:text-3xl font-bold text-gray-800 font-['Open_Sans']">
+                  Google Home Internship
+                </p>
+                <p className="text-base md:text-lg text-gray-500 font-['Open_Sans'] mt-2">
+                  More information coming soon.
+                </p>
+              </div>
 
-    {/* Text Container */}
-    {/* Note: I kept pt-20, but since the icon is now absolute, 
-        you might want to reduce this to pt-10 if it feels like too much empty space on top. */}
-    <div className="flex flex-col justify-start pt-20 md:justify-center md:pt-0 h-full md:pl-6 md:pr-72 items-center md:items-start text-center md:text-left relative z-20 pointer-events-none">
-      <p className="text-3xl font-bold text-gray-800 font-['Open_Sans']">
-        Google Home Internship
-      </p>
-      <p className="text-base md:text-lg text-gray-500 font-['Open_Sans'] mt-2">
-        More information coming soon.
-      </p>
-    </div>
+              <img
+                src="/images/nest-cam.png"
+                alt="Nest Cam"
+                className="absolute -bottom-0 md:-right-8 w-[250px] md:w-[420px] object-contain z-10 opacity-90"
+              />
 
-    <img
-      src="/images/nest-cam.png"
-      alt="Nest Cam"
-      className="absolute -bottom-0 md:-right-8 w-[300px] md:w-[420px] object-contain z-10 opacity-90"
-    />
+              <div
+                onMouseEnter={() => setFocusedTile('google-home')}
+                onMouseLeave={() => setFocusedTile(null)}
+              >
+                <ArrowButton href="https://home.google.com/welcome/" />
+              </div>
+            </div>
 
-    <div
-      onMouseEnter={() => setFocusedTile('google-home')}
-      onMouseLeave={() => setFocusedTile(null)}
-    >
-      <ArrowButton href="https://home.google.com/welcome/" />
-    </div>
-  </div>
-  
-  <div
-    className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-600 ease-in-out ${
-      focusedTile === 'google-home'
-        ? 'opacity-100 z-30'
-        : 'opacity-0 pointer-events-none'
-    }`}
-  >
-    <p className="font-semibold text-gray-800">Google</p>
-    <p className="text-sm text-gray-500">
-      Software Engineering Internship
-    </p>
-  </div>
-</div>
+            <div
+              className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-600 ease-in-out ${
+                focusedTile === 'google-home'
+                  ? 'opacity-100 z-30'
+                  : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <p className="font-semibold text-gray-800">Google</p>
+              <p className="text-sm text-gray-500">
+                Software Engineering Internship
+              </p>
+            </div>
+          </div>
 
           {/* Tile 2: Skills */}
           <div className="px-4 sm:px-12 py-4 md:p-2">
