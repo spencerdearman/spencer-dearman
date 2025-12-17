@@ -263,6 +263,11 @@ body {
   animation: blink 1.2s step-end infinite;
 }
 
+.prism-animation {
+  @apply absolute 
+  w-[80%] h-auto object-cover transition-transform duration-700 ease-in-out scale-[1.05] translate-y-[40%] group-hover:scale-[0.85] group-hover:translate-y-[15%];
+}
+
 .adrenaline-rotation {
   @apply absolute 
   top-1/2 left-1/2 

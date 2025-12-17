@@ -10,15 +10,23 @@ import SkillsTile from './SkillsTile';
 import ArrowButton from './ArrowButton';
 import PintosTile from './PintosTile';
 import InfleqtionTile from './InfleqtionTile';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Explore = () => {
   const [focusedTile, setFocusedTile] = useState(null);
+  const [camLightOn, setCamLightOn] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCamLightOn((prev) => !prev);
+    }, 1200);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="explore" className="section">
       <div className="container mx-auto px-4 py-16">
-        {/* The overlay */}
         <div
           onClick={() => setFocusedTile(null)}
           className={`fixed inset-0 bg-gray-100/80 backdrop-blur-sm z-10 transition-opacity duration-500 ease-in-out ${
@@ -53,9 +61,13 @@ const Explore = () => {
               </div>
 
               <img
-                src="/images/nest-cam.png"
+                src={
+                  camLightOn
+                    ? '/images/nest-cam.png'
+                    : '/images/nest-cam-off.png'
+                }
                 alt="Nest Cam"
-                className="absolute -bottom-0 md:-right-8 w-[250px] md:w-[420px] object-contain z-10 opacity-90"
+                className="absolute -bottom-0 md:-right-8 w-[250px] md:w-[420px] object-contain z-10 opacity-90 transition-opacity duration-300"
               />
 
               <div
@@ -116,19 +128,7 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 4: Introduction */}
-          <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2">
-            <div className={`tile-style aspect-square md:aspect-[2/1]`}>
-              <div className="w-1/2 sm:w-1/6">
-                <SkillIcon
-                  imgSrc={'/images/google-home.svg'}
-                  label={'Google Home'}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Tile 5: Infleqtion */}
+          {/* Tile 4: Infleqtion */}
           <div className="px-4 sm:px-12 py-4 md:p-2 relative">
             <div
               className={`tile-style aspect-square md:aspect-square relative group ${
@@ -157,7 +157,72 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 6: Adrenaline App */}
+          {/* Tile 5: Prism App */}
+          <div className="px-4 sm:px-12 py-4 md:p-2 group relative">
+            <div
+              className={`tile-style aspect-square relative overflow-hidden ${
+                focusedTile === 'prism' ? 'z-30' : ''
+              }`}
+            >
+              <div className="prism-animation">
+                <div className="w-full max-w-sm mx-auto aspect-[9/18] md:aspect-[9.5/20]">
+                  <div className="w-full h-full relative">
+                    <img
+                      src="/images/prism.png"
+                      alt="Prism"
+                      className="absolute h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                onMouseEnter={() => setFocusedTile('prism')}
+                onMouseLeave={() => setFocusedTile(null)}
+              >
+                <ArrowButton href="https://www.figma.com/design/1liAsrBRRRzo7uffeZORRN/Project---v2?node-id=2022-2768&t=ymuLdsWWJalVszAH-1" />
+              </div>
+            </div>
+            <div
+              className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
+                focusedTile === 'prism'
+                  ? 'opacity-100 z-30'
+                  : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <p className="font-semibold text-gray-800">Prism App</p>
+              <p className="text-sm text-gray-500">
+                An upgraded notes experience
+              </p>
+            </div>
+          </div>
+
+          {/* Tile 6: Coming Soon */}
+          <div className="px-4 sm:px-12 py-4 md:p-2 relative">
+            <div
+              className={`tile-style aspect-square md:aspect-square relative group ${
+                focusedTile === 'test2' ? 'z-30' : ''
+              }`}
+            >
+              <div
+                onMouseEnter={() => setFocusedTile('test2')}
+                onMouseLeave={() => setFocusedTile(null)}
+              >
+                <ArrowButton href="https://github.com/Infleqtion/client-superstaq/tree/f0108407c0440401bf452d92141cfbaa05e564e1/docs/source/apps/supermarq/examples/qre-challenge" />
+              </div>
+            </div>
+            <div
+              className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
+                focusedTile === 'test2'
+                  ? 'opacity-100 z-30'
+                  : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <p className="font-semibold text-gray-800">Coming Soon</p>
+              <p className="text-sm text-gray-500">...</p>
+            </div>
+          </div>
+
+          {/* Tile 7: Adrenaline App */}
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
               className={`tile-style aspect-[1/2] relative overflow-hidden ${
@@ -188,7 +253,7 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 7: PintOS */}
+          {/* Tile 8: PintOS */}
           <div className="md:col-span-2 px-4 sm:px-12 py-4 md:p-2 group">
             <div
               className={`aspect-square tile-style md:aspect-[2/1] relative overflow-hidden`}
