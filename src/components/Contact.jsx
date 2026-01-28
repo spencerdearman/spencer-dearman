@@ -28,11 +28,15 @@ const Contact = () => {
   ]);
 
   // Auto-scroll to bottom of chat
-  const messagesEndRef = useRef(null);
+  const chatContainerRef = useRef(null);
 
   const scrollToBottom = () => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (chatContainerRef.current) {
+      const { scrollHeight, clientHeight } = chatContainerRef.current;
+      chatContainerRef.current.scrollTo({
+        top: scrollHeight - clientHeight,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -151,7 +155,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex-1 overflow-y-auto pt-32 md:pt-40 pb-4 px-4 md:px-6 space-y-4 bg-white scroll-smooth">
+              <div
+                ref={chatContainerRef}
+                className="flex-1 overflow-y-auto pt-32 md:pt-40 pb-4 px-4 md:px-6 space-y-4 bg-white scroll-smooth"
+              >
                 <AnimatePresence initial={false}>
                   {messages.map((msg) => (
                     <motion.div
@@ -175,7 +182,7 @@ const Contact = () => {
                     </motion.div>
                   ))}
                 </AnimatePresence>
-                <div ref={messagesEndRef} className="h-1" />
+                <div className="h-1" />
               </div>
 
               <div className="p-3 md:p-4 bg-white border-t border-slate-50 z-20">
