@@ -2,47 +2,47 @@ import SkillIcon from './SkillIcon';
 
 const skillIcons = [
   {
-    imgSrc: 'images/c.svg',
+    imgSrc: 'images/skill-icons/c.svg',
     label: 'C',
     desc: 'Programming Language',
   },
   {
-    imgSrc: 'images/swift.svg',
+    imgSrc: 'images/skill-icons/swift.svg',
     label: 'Swift',
     desc: 'Programming Language',
   },
   {
-    imgSrc: 'images/python.svg',
+    imgSrc: 'images/skill-icons/python.svg',
     label: 'Python',
     desc: 'Programming Language',
   },
   {
-    imgSrc: 'images/aws.svg',
+    imgSrc: 'images/skill-icons/aws.svg',
     label: 'AWS',
     desc: 'Cloud Platform',
   },
   {
-    imgSrc: 'images/gcp.svg',
+    imgSrc: 'images/skill-icons/gcp.svg',
     label: 'GCP',
     desc: 'Cloud Platform',
   },
   {
-    imgSrc: 'images/figma.svg',
+    imgSrc: 'images/skill-icons/figma.svg',
     label: 'Figma',
     desc: 'Design Tool',
   },
   {
-    imgSrc: 'images/git.svg',
+    imgSrc: 'images/skill-icons/git.svg',
     label: 'Git',
     desc: 'Version Control',
   },
   {
-    imgSrc: 'images/widgetkit.png',
+    imgSrc: 'images/skill-icons/widgetkit.png',
     label: 'WidgetKit',
     desc: 'Framework',
   },
   {
-    imgSrc: 'images/app-intents.png',
+    imgSrc: 'images/skill-icons/app-intents.png',
     label: 'App Intents',
     desc: 'Framework',
   },

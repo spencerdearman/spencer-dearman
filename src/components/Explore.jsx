@@ -4,7 +4,7 @@
  */
 
 import Adrenaline from './Adrenaline';
-import Canopy from './Canopy';
+import InlaidTile from './InlaidTile';
 import SkillIcon from './SkillIcon';
 import SkillsTile from './SkillsTile';
 import ArrowButton from './ArrowButton';
@@ -45,8 +45,8 @@ const Explore = () => {
               <div className="absolute hidden md:block top-6 left-6 w-16 md:w-16 xl:w-20 z-20">
                 <div className="app-icon group relative">
                   <img
-                    src={'/images/google-home.png'}
-                    alt={'/images/google-home.png'}
+                    src={'/images/explore/google-home.png'}
+                    alt={'/images/explore/google-home.png'}
                     className="w-full h-auto p-1"
                   />
                 </div>
@@ -63,8 +63,8 @@ const Explore = () => {
               <img
                 src={
                   camLightOn
-                    ? '/images/nest-cam.png'
-                    : '/images/nest-cam-off.png'
+                    ? '/images/explore/nest-cam.png'
+                    : '/images/explore/nest-cam-off.png'
                 }
                 alt="Nest Cam"
                 className="absolute -bottom-0 md:-right-8 w-[250px] md:w-[420px] object-contain z-10 opacity-90 transition-opacity duration-300"
@@ -99,32 +99,32 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 3: Canopy App */}
+          {/* Tile 3: Inlaid App */}
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
               className={`tile-style aspect-[1/2] relative overflow-hidden ${
-                focusedTile === 'canopy' ? 'z-30' : ''
+                focusedTile === 'inlaid' ? 'z-30' : ''
               }`}
             >
               <div className="canopy-rotation">
-                <Canopy />
+                <InlaidTile />
               </div>
               <div
-                onMouseEnter={() => setFocusedTile('canopy')}
+                onMouseEnter={() => setFocusedTile('inlaid')}
                 onMouseLeave={() => setFocusedTile(null)}
               >
-                <ArrowButton href="https://www.figma.com/design/BQJLTXgtZy8YpgePxvmOx9/Assignment-5---Spencer-Dearman?node-id=85-5224&t=F5kGEKt38UUZNvFL-1" />
+                <ArrowButton href="https://spencerdearman.com/inlaid" />
               </div>
             </div>
             <div
               className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
-                focusedTile === 'canopy'
+                focusedTile === 'inlaid'
                   ? 'opacity-100 z-30'
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">Canopy App</p>
-              <p className="text-sm text-gray-500">A plant care app</p>
+              <p className="font-semibold text-gray-800">Inlaid</p>
+              <p className="text-sm text-gray-500">Smart Storage and NFC</p>
             </div>
           </div>
 
@@ -157,26 +157,26 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 5: Prism App */}
+          {/* Tile 5: Canopy App */}
           <div className="px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
               className={`tile-style aspect-square relative overflow-hidden ${
-                focusedTile === 'prism' ? 'z-30' : ''
+                focusedTile === 'canopy' ? 'z-30' : ''
               }`}
             >
               <div className="prism-animation">
                 <div className="w-full max-w-sm mx-auto aspect-[9/18] md:aspect-[9.5/20]">
                   <div className="w-full h-full relative">
                     <img
-                      src="/images/prism.png"
-                      alt="Prism"
+                      src="/images/explore/canopy.png"
+                      alt="Adrenaline"
                       className="absolute h-full w-full object-cover"
                     />
                   </div>
                 </div>
               </div>
               <div
-                onMouseEnter={() => setFocusedTile('prism')}
+                onMouseEnter={() => setFocusedTile('canopy')}
                 onMouseLeave={() => setFocusedTile(null)}
               >
                 <ArrowButton href="https://www.figma.com/design/1liAsrBRRRzo7uffeZORRN/Project---v2?node-id=2022-2768&t=ymuLdsWWJalVszAH-1" />
@@ -184,14 +184,14 @@ const Explore = () => {
             </div>
             <div
               className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
-                focusedTile === 'prism'
+                focusedTile === 'canopy'
                   ? 'opacity-100 z-30'
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">Prism App</p>
+              <p className="font-semibold text-gray-800">Canopy</p>
               <p className="text-sm text-gray-500">
-                An upgraded notes experience
+                Plant Care App Design
               </p>
             </div>
           </div>
@@ -246,9 +246,9 @@ const Explore = () => {
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">Adrenaline App</p>
+              <p className="font-semibold text-gray-800">Adrenaline</p>
               <p className="text-sm text-gray-500">
-                An app for diving statistics and results
+                Diving Statistics & Results
               </p>
             </div>
           </div>

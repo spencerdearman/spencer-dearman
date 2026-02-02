@@ -1,10 +1,10 @@
-const Canopy = () => {
+const InlaidTile = () => {
   return (
     <div className="w-full max-w-sm mx-auto aspect-[9/18] md:aspect-[9.5/20]">
       <div className="w-full h-full relative">
         <img
-          src="/images/canopy.png"
-          alt="Canopy"
+          src="/images/explore/inlaid.png"
+          alt="Inlaid"
           className="absolute h-full w-full object-cover"
         />
       </div>
@@ -12,4 +12,4 @@ const Canopy = () => {
   );
 };
 
-export default Canopy;
+export default InlaidTile;

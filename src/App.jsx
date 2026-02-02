@@ -21,7 +21,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
  * Components
  */
 import Home from './components/Home';
-import Inlaid from './components/Inlaid';
+import Inlaid from './components/inlaid/Inlaid';
 import Privacy from './components/Privacy';
 
 const App = () => {

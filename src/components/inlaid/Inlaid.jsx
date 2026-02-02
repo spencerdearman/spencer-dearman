@@ -3,6 +3,8 @@
  * @license Apache-2.0
  */
 
+import { ButtonPrimary } from "../Button";
+
 const Inlaid = () => {
   return (
     <section id="explore" className="section min-h-screen">
@@ -14,6 +16,15 @@ const Inlaid = () => {
            <p className="about-content">
              Smart Storage & NFC
            </p>
+
+           <div className="flex justify-center md:justify-start">
+             <ButtonPrimary 
+               href="https://apps.apple.com/us/app/inlaid/id6758177896"
+               label="Download on the App Store"
+               icon="download"
+               target="_blank"
+             />
+           </div>
         </div>
 
         {/* Tiles Grid */}
@@ -23,7 +34,7 @@ const Inlaid = () => {
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div className="tile-style aspect-[1/2] relative overflow-hidden p-4">
                <img 
-                 src="/images/inlaid-1.png" 
+                 src="/images/inlaid/inlaid-1.png" 
                  alt="Inlaid App Screenshot 1" 
                  className="w-full h-full object-contain rounded-xl"
                />
@@ -34,7 +45,7 @@ const Inlaid = () => {
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div className="tile-style aspect-[1/2] relative overflow-hidden p-4">
                <img 
-                 src="/images/inlaid-2.png" 
+                 src="/images/inlaid/inlaid-2.png" 
                  alt="Inlaid App Screenshot 2" 
                  className="w-full h-full object-contain rounded-xl"
                />
@@ -45,7 +56,7 @@ const Inlaid = () => {
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div className="tile-style aspect-[1/2] relative overflow-hidden p-4">
                <img 
-                 src="/images/inlaid-3.png" 
+                 src="/images/inlaid/inlaid-3.png" 
                  alt="Inlaid App Screenshot 3" 
                  className="w-full h-full object-contain rounded-xl"
                />
@@ -58,7 +69,7 @@ const Inlaid = () => {
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div className="tile-style aspect-[1/2] relative overflow-hidden p-4">
                <img 
-                 src="/images/inlaid-4.png" 
+                 src="/images/inlaid/inlaid-4.png" 
                  alt="Inlaid App Screenshot 4" 
                  className="w-full h-full object-contain rounded-xl"
                />
@@ -69,7 +80,7 @@ const Inlaid = () => {
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div className="tile-style aspect-[1/2] relative overflow-hidden p-4">
                <img 
-                 src="/images/inlaid-5.png" 
+                 src="/images/inlaid/inlaid-5.png" 
                  alt="Inlaid App Screenshot 5" 
                  className="w-full h-full object-contain rounded-xl"
                />
@@ -80,7 +91,7 @@ const Inlaid = () => {
           <div className="md:row-span-2 px-4 sm:px-12 py-4 md:p-2 group relative">
             <div className="tile-style aspect-[1/2] relative overflow-hidden p-4">
                <img 
-                 src="/images/inlaid-6.png" 
+                 src="/images/inlaid/inlaid-6.png" 
                  alt="Inlaid App Screenshot 6" 
                  className="w-full h-full object-contain rounded-xl"
                />

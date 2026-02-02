@@ -35,12 +35,12 @@ const InfleqtionTile = () => {
         style={{ ...style, transformStyle: 'preserve-3d' }}
       >
         <img
-          src={'/images/infleqtion-greyed.png'}
+          src={'/images/explore/infleqtion-greyed.png'}
           alt={'Grey Infleqtion Logo'}
           className="absolute inset-0 w-full h-full object-contain p-12 opacity-80"
         />
         <img
-          src={'/images/infleqtion.png'}
+          src={'/images/explore/infleqtion.png'}
           alt={'Color Infleqtion Logo'}
           className="absolute inset-0 w-full h-full object-contain p-12 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out"
         />
