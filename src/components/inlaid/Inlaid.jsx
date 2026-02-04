@@ -68,7 +68,7 @@ const Inlaid = () => {
                  <img 
                    src="/images/inlaid/inlaid-1.png" 
                    alt="Inlaid Screen 1" 
-                   className="w-[125px] md:w-[240px] h-auto md:rounded-[40px]"
+                   className="w-[116px] md:w-[240px] h-auto md:rounded-[40px]"
                  />
               </div>
 
