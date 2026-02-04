@@ -19,7 +19,7 @@ const Inlaid = () => {
       .from('.hero-inner-left', { xPercent: -25, opacity: 100 }, '<')
       .from('.hero-inner-right', { xPercent: -75, opacity: 100 }, '<')
       .from('.hero-outer-left', { xPercent: 0, opacity: 100 }, '<')
-      .from('.hero-outer-right', { xPercent: -75, opacity: 100 }, '<');
+      .from('.hero-outer-right', { xPercent: -100, opacity: 100 }, '<');
   }, { scope: containerRef });
 
   return (
@@ -84,8 +84,8 @@ const Inlaid = () => {
               {/* Outer Right (5) */}
               <div className="hero-outer-right absolute bottom-0 left-1/2 -translate-x-1/2 z-0 ml-[100px] md:ml-[300px] mb-8 md:mb-12">
                  <img 
-                   src="/images/inlaid/inlaid-5.png" 
-                   alt="Inlaid Screen 5" 
+                   src="/images/inlaid/inlaid-4.png" 
+                   alt="Inlaid Screen 5 (Debug Swap)" 
                    className="w-[100px] md:w-[210px] h-auto"
                  />
               </div>
