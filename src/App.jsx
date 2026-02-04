@@ -22,7 +22,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
  */
 import Home from './components/Home';
 import Inlaid from './components/inlaid/Inlaid';
-import Privacy from './components/Privacy';
+import Privacy from './components/inlaid/Privacy';
 
 import ScrollToTop from './components/ScrollToTop';
 
