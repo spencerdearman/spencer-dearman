@@ -24,10 +24,13 @@ import Home from './components/Home';
 import Inlaid from './components/inlaid/Inlaid';
 import Privacy from './components/Privacy';
 
+import ScrollToTop from './components/ScrollToTop';
+
 const App = () => {
   return (
     <ReactLenis root>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inlaid" element={<Inlaid />} />
