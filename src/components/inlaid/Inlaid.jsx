@@ -59,7 +59,7 @@ const Inlaid = () => {
                 <img 
                   src="/images/inlaid/inlaid-2.png" 
                   alt="Inlaid Screen 2" 
-                  className="w-[110px] md:w-[230px] h-auto"
+                  className="w-[110px] md:w-[230px] min-w-[110px] md:min-w-[230px] h-auto object-cover"
                 />
               </div>
 
@@ -77,7 +77,7 @@ const Inlaid = () => {
                  <img 
                    src="/images/inlaid/inlaid-3.png" 
                    alt="Inlaid Screen 3" 
-                   className="w-[110px] md:w-[230px] h-auto"
+                   className="w-[110px] md:w-[230px] min-w-[110px] md:min-w-[230px] h-auto object-cover"
                  />
               </div>
 
