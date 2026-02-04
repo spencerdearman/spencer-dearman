@@ -27,13 +27,13 @@ const Inlaid = () => {
       <div className="container mx-auto px-4 pt-10 pb-16">
         
         {/* Header Section */}
-        <div className="mb-24 text-center mt-2">
+        <div className="mb-24 text-center mt-16">
            <h2 className="text-xl md:text-2xl font-semibold text-blue-600 mb-4">Inlaid</h2>
            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-6">
              Smart Storage.<br />Reimagined.
            </h1>
 
-           <div className="flex justify-center mb-16">
+           <div className="flex justify-center md:mb-4">
              <ButtonPrimary 
                href="https://apps.apple.com/us/app/inlaid/id6758177896"
                label="Download on the App Store"
@@ -43,23 +43,23 @@ const Inlaid = () => {
            </div>
 
            {/* Hero Composition */}
-           <div ref={containerRef} className="relative w-full h-[300px] md:h-[500px] flex justify-center items-end -mb-16 md:-mb-24 mt-12 overflow-visible">
+           <div ref={containerRef} className="relative w-full h-[300px] md:h-[500px] flex justify-center items-end mb-16 md:mb-16 overflow-visible">
               
               {/* Outer Left (4) */}
-              <div className="hero-outer-left absolute bottom-0 left-1/2 -translate-x-1/2 z-0 -ml-[190px] md:-ml-[340px] mb-8 md:mb-12">
+              <div className="hero-outer-left absolute bottom-0 left-1/2 -translate-x-1/2 z-0 -ml-[100px] md:-ml-[300px] mb-8 md:mb-12">
                  <img 
                    src="/images/inlaid/inlaid-4.png" 
                    alt="Inlaid Screen 4" 
-                   className="w-[140px] md:w-[240px] h-auto rounded-[24px]"
+                   className="w-[100px] md:w-[210px] h-auto"
                  />
               </div>
 
               {/* Inner Left (2) */}
-              <div className="hero-inner-left absolute bottom-0 left-1/2 -translate-x-1/2 z-10 -ml-[110px] md:-ml-[190px] mb-4 md:mb-6">
+              <div className="hero-inner-left absolute bottom-0 left-1/2 -translate-x-1/2 z-10 -ml-[60px] md:-ml-[170px] mb-4 md:mb-6">
                 <img 
                   src="/images/inlaid/inlaid-2.png" 
                   alt="Inlaid Screen 2" 
-                  className="w-[160px] md:w-[260px] h-auto rounded-[30px]"
+                  className="w-[110px] md:w-[230px] h-auto"
                 />
               </div>
 
@@ -68,25 +68,25 @@ const Inlaid = () => {
                  <img 
                    src="/images/inlaid/inlaid-1.png" 
                    alt="Inlaid Screen 1" 
-                   className="w-[160px] md:w-[270px] h-auto rounded-[40px]"
+                   className="w-[125px] md:w-[240px] h-auto md:rounded-[40px]"
                  />
               </div>
 
               {/* Inner Right (3) */}
-              <div className="hero-inner-right absolute bottom-0 left-1/2 -translate-x-1/2 z-10 ml-[110px] md:ml-[190px] mb-4 md:mb-6">
+              <div className="hero-inner-right absolute bottom-0 left-1/2 -translate-x-1/2 z-10 ml-[60px] md:ml-[170px] mb-4 md:mb-6">
                  <img 
                    src="/images/inlaid/inlaid-3.png" 
                    alt="Inlaid Screen 3" 
-                   className="w-[160px] md:w-[260px] h-auto rounded-[30px]"
+                   className="w-[110px] md:w-[230px] h-auto"
                  />
               </div>
 
               {/* Outer Right (5) */}
-              <div className="hero-outer-right absolute bottom-0 left-1/2 -translate-x-1/2 z-0 ml-[190px] md:ml-[340px] mb-8 md:mb-12">
+              <div className="hero-outer-right absolute bottom-0 left-1/2 -translate-x-1/2 z-0 ml-[100px] md:ml-[300px] mb-8 md:mb-12">
                  <img 
                    src="/images/inlaid/inlaid-5.png" 
                    alt="Inlaid Screen 5" 
-                   className="w-[140px] md:w-[240px] h-auto rounded-[24px]"
+                   className="w-[100px] md:w-[210px] h-auto"
                  />
               </div>
 
