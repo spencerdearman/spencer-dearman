@@ -50,7 +50,7 @@ const Inlaid = () => {
                  <img 
                    src="/images/inlaid/inlaid-4.png" 
                    alt="Inlaid Screen 4" 
-                   className="w-[100px] md:w-[210px] h-auto"
+                   className="w-[100px] md:w-[210px] min-w-[100px] md:min-w-[210px] h-auto object-cover"
                  />
               </div>
 
@@ -84,9 +84,9 @@ const Inlaid = () => {
               {/* Outer Right (5) */}
               <div className="hero-outer-right absolute bottom-0 left-1/2 -translate-x-1/2 z-0 ml-[100px] md:ml-[300px] mb-8 md:mb-12">
                  <img 
-                   src="/images/inlaid/inlaid-4.png" 
-                   alt="Inlaid Screen 5 (Debug Swap)" 
-                   className="w-[100px] md:w-[210px] h-auto"
+                   src="/images/inlaid/inlaid-5.png" 
+                   alt="Inlaid Screen 5" 
+                   className="w-[100px] md:w-[210px] min-w-[100px] md:min-w-[210px] h-auto object-cover"
                  />
               </div>
 
