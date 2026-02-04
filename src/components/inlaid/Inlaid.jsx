@@ -27,17 +27,16 @@ const Inlaid = () => {
       <div className="container mx-auto px-4 pt-10 pb-16">
         
         {/* Header Section */}
-        <div className="mb-24 text-center mt-16">
+        <div className="mb-24 text-center mt-16 md:mt-8">
            <h2 className="text-xl md:text-2xl font-semibold text-blue-600 mb-4">Inlaid</h2>
            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-6">
              Smart Storage.<br />Reimagined.
            </h1>
 
-           <div className="flex justify-center md:mb-4">
+           <div className="flex justify-center md:mb-8">
              <ButtonPrimary 
                href="https://apps.apple.com/us/app/inlaid/id6758177896"
                label="Download on the App Store"
-               icon="download"
                target="_blank"
              />
            </div>
@@ -49,7 +48,7 @@ const Inlaid = () => {
               <div className="hero-outer-left absolute bottom-0 left-1/2 -translate-x-1/2 z-0 -ml-[100px] md:-ml-[300px] mb-8 md:mb-12">
                  <img 
                    src="/images/inlaid/inlaid-4.png" 
-                   alt="Inlaid Screen 4" 
+                   alt="Inlaid CloudKit Sync" 
                    className="w-[100px] md:w-[210px] min-w-[100px] md:min-w-[210px] h-auto object-cover"
                  />
               </div>
@@ -58,7 +57,7 @@ const Inlaid = () => {
               <div className="hero-inner-left absolute bottom-0 left-1/2 -translate-x-1/2 z-10 -ml-[60px] md:-ml-[170px] mb-4 md:mb-6">
                 <img 
                   src="/images/inlaid/inlaid-2.png" 
-                  alt="Inlaid Screen 2" 
+                  alt="Inlaid NFC Scan" 
                   className="w-[110px] md:w-[230px] min-w-[110px] md:min-w-[230px] h-auto object-cover"
                 />
               </div>
@@ -67,7 +66,7 @@ const Inlaid = () => {
               <div className="hero-center relative z-20 mb-2 md:mb-4">
                  <img 
                    src="/images/inlaid/inlaid-1.png" 
-                   alt="Inlaid Screen 1" 
+                   alt="Inlaid Dashboard" 
                    className="w-[116px] md:w-[240px] h-auto md:rounded-[40px]"
                  />
               </div>
@@ -76,7 +75,7 @@ const Inlaid = () => {
               <div className="hero-inner-right absolute bottom-0 left-1/2 -translate-x-1/2 z-10 ml-[60px] md:ml-[170px] mb-4 md:mb-6">
                  <img 
                    src="/images/inlaid/inlaid-3.png" 
-                   alt="Inlaid Screen 3" 
+                   alt="Inlaid Visual Search" 
                    className="w-[110px] md:w-[230px] min-w-[110px] md:min-w-[230px] h-auto object-cover"
                  />
               </div>
@@ -85,7 +84,7 @@ const Inlaid = () => {
               <div className="hero-outer-right absolute bottom-0 left-1/2 -translate-x-1/2 z-0 ml-[100px] md:ml-[300px] mb-8 md:mb-12">
                  <img 
                    src="/images/inlaid/inlaid-5.png" 
-                   alt="Inlaid Screen 5" 
+                   alt="Inlaid Settings" 
                    className="w-[100px] md:w-[210px] min-w-[100px] md:min-w-[210px] h-auto object-cover"
                  />
               </div>
@@ -95,20 +94,20 @@ const Inlaid = () => {
 
         <div className="">
           
-          {/* Tile 1 */}
+          {/* Tile 1: The Core Value Prop */}
           <div className="px-4 sm:px-12 py-4 md:p-2">
             <div className="tile-style min-h-[400px] p-0 overflow-hidden relative group">
               <div className="grid grid-cols-1 md:grid-cols-2 h-full items-center">
                 <div className="p-8 md:p-12 order-2 md:order-1 flex flex-col justify-center">
-                  <h3 className="headline-2 mb-4 text-zinc-900">Organize Everything.</h3>
+                  <h3 className="headline-2 mb-4 text-zinc-900">See inside without opening.</h3>
                   <p className="about-content text-lg">
-                     Keep track of all your items with a beautiful, visual inventory. Never lose track of where you put something again.
+                     Create a searchable, digital twin of your physical storage. Know exactly which box holds your passport or vintage vinyl before you ever unstack them.
                   </p>
                 </div>
                 <div className="relative h-full min-h-[300px] order-1 md:order-2 flex items-center justify-center p-8">
                    <img 
                      src="/images/inlaid/inlaid-1.png" 
-                     alt="Inlaid App Screenshot 1" 
+                     alt="Digital Twin Interface" 
                      className="w-full max-w-[300px] h-auto rounded-[30px]"
                    />
                 </div>
@@ -116,41 +115,41 @@ const Inlaid = () => {
             </div>
           </div>
 
-          {/* Tile 2 (Reversed) */}
+          {/* Tile 2: NFC (The Magic) */}
           <div className="px-4 sm:px-12 py-4 md:p-2">
             <div className="tile-style min-h-[400px] p-0 overflow-hidden relative group">
               <div className="grid grid-cols-1 md:grid-cols-2 h-full items-center">
                 <div className="relative h-full min-h-[300px] flex items-center justify-center p-8">
                    <img 
                      src="/images/inlaid/inlaid-2.png" 
-                     alt="Inlaid App Screenshot 2" 
+                     alt="NFC Scanning Feature" 
                      className="w-full max-w-[300px] h-auto object-contain rounded-[30px]"
                    />
                 </div>
                 <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <h3 className="headline-2 mb-4 text-zinc-900">Quick Scan.</h3>
+                  <h3 className="headline-2 mb-4 text-zinc-900">Tap. Scan. Found.</h3>
                   <p className="about-content text-lg">
-                     Use NFC technology to instantly bring up the contents of any box or storage bin just by tapping your phone.
+                     Link physical containers to Inlaid with standard NTAG215 stickers. Just tap your iPhone to a box to instantly launch its manifest.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Tile 3 */}
+          {/* Tile 3: AI Visual Search (The Tech) - Swapped out "Dark Mode" */}
           <div className="px-4 sm:px-12 py-4 md:p-2">
             <div className="tile-style min-h-[400px] p-0 overflow-hidden relative group">
               <div className="grid grid-cols-1 md:grid-cols-2 h-full items-center">
                 <div className="p-8 md:p-12 order-2 md:order-1 flex flex-col justify-center">
-                  <h3 className="headline-2 mb-4 text-zinc-900">Dark Mode.</h3>
+                  <h3 className="headline-2 mb-4 text-zinc-900">Visual Intelligence.</h3>
                   <p className="about-content text-lg">
-                     Designed to look stunning in both light and dark modes, perfectly matching your system preferences.
+                     Don't remember what you named it? Inlaid analyzes your photos so you can search for "Red Cable" or "Glass Lens" using on-device AI.
                   </p>
                 </div>
                 <div className="relative h-full min-h-[300px] order-1 md:order-2 flex items-center justify-center p-8">
                    <img 
                      src="/images/inlaid/inlaid-3.png" 
-                     alt="Inlaid App Screenshot 3" 
+                     alt="AI Visual Search" 
                      className="w-full max-w-[300px] h-auto object-contain rounded-[30px]"
                    />
                 </div>
@@ -158,39 +157,39 @@ const Inlaid = () => {
             </div>
           </div>
 
-          {/* Grid for smaller features */}
+          {/* Grid for Pro Features */}
           <div className="grid grid-cols-1 md:grid-cols-2">
              
-             {/* Small Tile 4 */}
+             {/* Small Tile 4: CloudKit */}
              <div className="px-4 sm:px-12 py-4 md:p-2">
                <div className="tile-style p-8 flex flex-col items-center text-center h-full">
                   <div className="mb-8 w-full flex justify-center">
                      <img 
                        src="/images/inlaid/inlaid-4.png" 
-                       alt="Inlaid App Screenshot 4" 
+                       alt="CloudKit Sync" 
                        className="w-full max-w-[240px] rounded-[24px]"
                      />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2 text-zinc-900">Precision Finding</h3>
+                  <h3 className="text-2xl font-semibold mb-2 text-zinc-900">Synced via CloudKit</h3>
                   <p className="about-content text-base">
-                    Locate your items with ease using advanced search and filtering.
+                    Start packing on iPhone. Find it on iPad. Your inventory is encrypted and synced automatically.
                   </p>
                </div>
              </div>
 
-             {/* Small Tile 5 */}
+             {/* Small Tile 5: NFC Writer/Spotlight */}
              <div className="px-4 sm:px-12 py-4 md:p-2">
                <div className="tile-style p-8 flex flex-col items-center text-center h-full">
                   <div className="mb-8 w-full flex justify-center">
                      <img 
                        src="/images/inlaid/inlaid-5.png" 
-                       alt="Inlaid App Screenshot 5" 
+                       alt="NFC Writer Suite" 
                        className="w-full max-w-[240px] rounded-[24px]"
                      />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2 text-zinc-900">Smart Tags</h3>
+                  <h3 className="text-2xl font-semibold mb-2 text-zinc-900">NFC Power Tools</h3>
                   <p className="about-content text-base">
-                     Categorize and tag your items for effortless organization.
+                     Go beyond storage. Write custom tags to share Wi-Fi credentials, trigger HomeKit scenes, or launch deep links.
                   </p>
                </div>
              </div>
