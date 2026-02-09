@@ -42,7 +42,7 @@ const Inlaid = () => {
         <div className="mb-24 text-center mt-16 md:mt-8">
            <h2 className="text-xl md:text-2xl font-semibold text-blue-600 mb-4">Inlaid</h2>
            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-6">
-             Smart Storage.<br />Reimagined.
+             Smart Storage.<br />Searchable.
            </h1>
 
            <div className="flex justify-center md:mb-8">

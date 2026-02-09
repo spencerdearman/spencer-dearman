@@ -5,7 +5,6 @@
 
 import Adrenaline from './Adrenaline';
 import InlaidTile from './InlaidTile';
-import SkillIcon from './SkillIcon';
 import SkillsTile from './SkillsTile';
 import ArrowButton from './ArrowButton';
 import PintosTile from './PintosTile';
