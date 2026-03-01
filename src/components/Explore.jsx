@@ -168,7 +168,7 @@ const Explore = () => {
                   <div className="w-full h-full relative">
                     <img
                       src="/images/explore/canopy.png"
-                      alt="Adrenaline"
+                      alt="Canopy App"
                       className="absolute h-full w-full object-cover"
                     />
                   </div>
