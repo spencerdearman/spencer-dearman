@@ -9,7 +9,7 @@
 import { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ navOpen, setNavOpen }) => {
   const lastActiveLink = useRef();
   const activeBox = useRef();
 
@@ -36,6 +36,10 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.left = event.target.offsetLeft + 'px';
     activeBox.current.style.width = event.target.offsetWidth + 'px';
     activeBox.current.style.height = event.target.offsetHeight + 'px';
+
+    if (window.innerWidth < 768) {
+      setNavOpen(false);
+    }
   };
 
   const navItems = [
@@ -59,9 +63,7 @@ const Navbar = ({ navOpen }) => {
 
   return (
     <nav
-      className={`navbar flex items-center p-1 relative ${
-        navOpen ? 'active' : ''
-      }`}
+      className={`navbar ${navOpen ? 'active' : ''}`}
     >
       {navItems.map(({ label, link, className, ref }, key) => (
         <a
