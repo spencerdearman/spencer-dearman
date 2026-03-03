@@ -129,33 +129,32 @@ const Explore = () => {
             </div>
           </div>
 
-           {/* Tile 4: Bubbles App */}
-          <div className="px-4 sm:px-12 py-4 md:p-2 group relative">
+          {/* Tile 4: Infleqtion */}
+          <div className="px-4 sm:px-12 py-4 md:p-2 relative">
             <div
-              className={`tile-style aspect-square md:aspect-square relative overflow-hidden ${
-                focusedTile === 'bubbles' ? 'z-30' : ''
+              className={`tile-style aspect-square md:aspect-square relative group ${
+                focusedTile === 'infleqtion' ? 'z-30' : ''
               }`}
             >
-              <div className="relative h-full w-full flex items-center justify-center">
-                <BubblesTile />
-              </div>
+              <InfleqtionTile />
               <div
-                onMouseEnter={() => setFocusedTile('bubbles')}
+                onMouseEnter={() => setFocusedTile('infleqtion')}
                 onMouseLeave={() => setFocusedTile(null)}
-                className="z-20"
               >
-                <ArrowButton href="/bubbles" />
+                <ArrowButton href="https://github.com/Infleqtion/client-superstaq/tree/f0108407c0440401bf452d92141cfbaa05e564e1/docs/source/apps/supermarq/examples/qre-challenge" />
               </div>
             </div>
             <div
               className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
-                focusedTile === 'bubbles'
+                focusedTile === 'infleqtion'
                   ? 'opacity-100 z-30'
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">Bubbles</p>
-              <p className="text-sm text-gray-500">visionOS Experience</p>
+              <p className="font-semibold text-gray-800">Infleqtion</p>
+              <p className="text-sm text-gray-500">
+                Quantum Software Engineering Internship
+              </p>
             </div>
           </div>
 
@@ -198,32 +197,31 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 6: Infleqtion */}
-          <div className="px-4 sm:px-12 py-4 md:p-2 relative">
+          {/* Tile 6: Bubbles App */}
+          <div className="px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
-              className={`tile-style aspect-square md:aspect-square relative group ${
-                focusedTile === 'infleqtion' ? 'z-30' : ''
+              className={`tile-style !p-0 aspect-square md:aspect-square relative overflow-hidden ${
+                focusedTile === 'bubbles' ? 'z-30' : ''
               }`}
             >
-              <InfleqtionTile />
+              <BubblesTile />
               <div
-                onMouseEnter={() => setFocusedTile('infleqtion')}
+                onMouseEnter={() => setFocusedTile('bubbles')}
                 onMouseLeave={() => setFocusedTile(null)}
+                className="z-20"
               >
-                <ArrowButton href="https://github.com/Infleqtion/client-superstaq/tree/f0108407c0440401bf452d92141cfbaa05e564e1/docs/source/apps/supermarq/examples/qre-challenge" />
+                <ArrowButton href="/bubbles" />
               </div>
             </div>
             <div
               className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
-                focusedTile === 'infleqtion'
+                focusedTile === 'bubbles'
                   ? 'opacity-100 z-30'
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">Infleqtion</p>
-              <p className="text-sm text-gray-500">
-                Quantum Software Engineering Internship
-              </p>
+              <p className="font-semibold text-gray-800">Bubbles</p>
+              <p className="text-sm text-gray-500">visionOS Experience</p>
             </div>
           </div>
 
