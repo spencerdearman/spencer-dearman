@@ -339,6 +339,25 @@ body {
       group-hover:rotate-0 group-hover:scale-100;
 }
 
+.bubbles-rotation {
+  @apply absolute 
+  top-1/2 left-1/2 
+  -translate-x-1/2 -translate-y-1/2 w-5/6
+  transition-all duration-700 ease-in-out
+  group-hover:scale-110;
+}
+
+.bubbles-rotation img {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  33% { transform: translateY(-10px) rotate(2deg); }
+  66% { transform: translateY(5px) rotate(-2deg); }
+}
+
+
 /* ---------------------------------- *\
  * HEADER
 \* ---------------------------------- */
@@ -483,3 +502,37 @@ body {
 .corner-radius {
   @apply rounded-[30px];
 }
+
+model-viewer {
+  --poster-color: transparent;
+}
+
+model-viewer::part(default-progress-bar) {
+  display: none;
+}
+
+.btn-liquid-glass {
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(0, 0, 0, 0.12);
+  backdrop-filter: url(#frosted);
+  -webkit-backdrop-filter: url(#frosted);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-liquid-glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+

@@ -23,6 +23,9 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 import Home from './components/Home';
 import Inlaid from './components/inlaid/Inlaid';
 import Privacy from './components/inlaid/Privacy';
+import Swatch from './components/swatch/Swatch';
+import SwatchPrivacy from './components/swatch/Privacy';
+import Bubbles from './components/bubbles/Bubbles';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -35,6 +38,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/inlaid" element={<Inlaid />} />
           <Route path="/inlaid/privacy" element={<Privacy />} />
+          <Route path="/swatch" element={<Swatch />} />
+          <Route path="/swatch/privacy" element={<SwatchPrivacy />} />
+          <Route path="/bubbles" element={<Bubbles />} />
+
         </Routes>
       </Router>
     </ReactLenis>
