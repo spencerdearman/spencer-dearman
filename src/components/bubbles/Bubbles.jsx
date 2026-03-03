@@ -22,9 +22,17 @@ const Bubbles = () => {
     const defaultIcon = favicon.href;
     favicon.href = "/images/bubbles/bubbles-icon.png";
 
+    // Fix for "white top" on mobile: ensure body reflects the theme of this page
+    const originalBodyBg = document.body.style.backgroundColor;
+    const originalHtmlBg = document.documentElement.style.backgroundColor;
+    document.body.style.backgroundColor = 'rgb(0, 0, 0)';
+    document.documentElement.style.backgroundColor = 'rgb(0, 0, 0)';
+
     return () => {
       favicon.href = defaultIcon;
       document.title = "Spencer Dearman - Portfolio";
+      document.body.style.backgroundColor = originalBodyBg;
+      document.documentElement.style.backgroundColor = originalHtmlBg;
     };
   }, []);
 
