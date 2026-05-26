@@ -26,6 +26,8 @@ import Privacy from './components/inlaid/Privacy';
 import Swatch from './components/swatch/Swatch';
 import SwatchPrivacy from './components/swatch/Privacy';
 import Bubbles from './components/bubbles/Bubbles';
+import ContextOS from './components/contextos/ContextOS';
+import ContextOSPrivacy from './components/contextos/Privacy';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -41,7 +43,8 @@ const App = () => {
           <Route path="/swatch" element={<Swatch />} />
           <Route path="/swatch/privacy" element={<SwatchPrivacy />} />
           <Route path="/bubbles" element={<Bubbles />} />
-
+          <Route path="/contextos" element={<ContextOS />} />
+          <Route path="/contextos/privacy" element={<ContextOSPrivacy />} />
         </Routes>
       </Router>
     </ReactLenis>
