@@ -39,15 +39,16 @@ const Hero = () => {
                 Spencer Dearman
               </h1>
               <p className="text-lg  md:pl-[4px] md:text-2xl text-slate-500 font-medium mt-2">
-                Incoming Google Software Engineer
+                Google Software Engineer
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-4 md:p-8 text-slate-600 leading-relaxed max-w-3xl text-md sm:text-lg">
               <p>
-                Hi! I&apos;m a fourth-year student pursuing a joint BS/MS in
-                Computer Science with a specialization in Computer Systems at
-                the University of Chicago. I am passionate about{' '}
+                Hi! I&apos;m a Software Engineer at Google on the Universal P13n team. 
+                I recently graduated from the University of Chicago with a joint BS/MS in
+                Computer Science with a specialization in Computer Systems. 
+                I am passionate about{' '}
                 <span className="font-semibold text-slate-800">
                   low-level programming
                 </span>{' '}
