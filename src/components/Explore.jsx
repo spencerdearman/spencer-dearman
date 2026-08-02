@@ -11,6 +11,7 @@ import PintosTile from './PintosTile';
 import InfleqtionTile from './InfleqtionTile';
 import SwatchTile from './SwatchTile';
 import BubblesTile from './BubblesTile';
+import ContextOSTile from './ContextOSTile';
 import { useState, useEffect } from 'react';
 
 const Explore = () => {
@@ -158,41 +159,31 @@ const Explore = () => {
             </div>
           </div>
 
-          {/* Tile 5: Canopy App */}
+          {/* Tile 5: ContextOS */}
           <div className="px-4 sm:px-12 py-4 md:p-2 group relative">
             <div
-              className={`tile-style aspect-square relative overflow-hidden ${
-                focusedTile === 'canopy' ? 'z-30' : ''
+              className={`tile-style !p-0 aspect-square relative overflow-hidden ${
+                focusedTile === 'contextos' ? 'z-30' : ''
               }`}
             >
-              <div className="prism-animation">
-                <div className="w-full max-w-sm mx-auto aspect-[9/18] md:aspect-[9.5/20]">
-                  <div className="w-full h-full relative">
-                    <img
-                      src="/images/explore/canopy.png"
-                      alt="Canopy App"
-                      className="absolute h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
+              <ContextOSTile />
               <div
-                onMouseEnter={() => setFocusedTile('canopy')}
+                onMouseEnter={() => setFocusedTile('contextos')}
                 onMouseLeave={() => setFocusedTile(null)}
               >
-                <ArrowButton href="https://www.figma.com/design/1liAsrBRRRzo7uffeZORRN/Project---v2?node-id=2022-2768&t=ymuLdsWWJalVszAH-1" />
+                <ArrowButton href="/contextos" />
               </div>
             </div>
             <div
               className={`absolute -bottom-[40px] left-0 right-0 pt-2 text-center transition-opacity duration-300 ease-in-out ${
-                focusedTile === 'canopy'
+                focusedTile === 'contextos'
                   ? 'opacity-100 z-30'
                   : 'opacity-0 pointer-events-none'
               }`}
             >
-              <p className="font-semibold text-gray-800">Canopy</p>
+              <p className="font-semibold text-gray-800">ContextOS</p>
               <p className="text-sm text-gray-500">
-                Plant Care App Design
+                iOS Daily Timeline App
               </p>
             </div>
           </div>
